@@ -22,6 +22,7 @@ import RequisicoesTypes from './pages/requisicoesTypes';
 import RequisicoesTypesAsync from './pages/requisicoesTypesAsync';
 import RequisicoesPost from './pages/requisicoesPost';
 import RequisicoesPostRefact from './pages/requisicoesPostRefact';
+import RequisicoesFilmes from './pages/requisicoesFilmes';
 
 
 
@@ -45,6 +46,8 @@ function App(){
           <Route path="/requisicoesTypesAsync" element={<RequisicoesTypesAsync/> } />
           <Route path="/requisicoesPost" element={<RequisicoesPost/> } />
           <Route path="/requisicoesRefact" element={<RequisicoesPostRefact/> } />
+          <Route path="/requisicoesFilmes" element={<RequisicoesFilmes/> } />
+
           
 
             
