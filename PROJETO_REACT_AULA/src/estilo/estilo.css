@@ -1,0 +1,154 @@
+
+/*MENU*/
+
+.login{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.products{
+  width: 100px;
+  height: 100px;
+}
+
+.div_form{
+  padding: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.nav-link[aria-current="page"] {
+  color: #000;
+  opacity: 1;
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container_menu{
+  display: flex;
+  flex-direction: row ;
+  background-color: inherit;
+  height: 100px;    
+}
+
+.navega{
+  color: brown;
+}
+
+.ListaMenu  {
+  display: flex;  
+  flex-direction: row;
+  justify-content: center;  
+  align-items: center;
+  list-style-type: none;     
+}
+
+li{
+  padding: 30px;
+  margin: 10px;
+  text-decoration: none;
+}
+
+li:hover{
+  background-color: rgb(123, 194, 234);
+  color: white;
+}
+
+.linkmenu{
+  text-decoration: none;
+  text-decoration-style: none;
+}
+
+
+
+/*CABEÇALHO*/
+
+.prop{
+  font-size:15px;
+  display: flex;
+  flex-direction: row ;
+  justify-content: center;
+  background-color: rgb(196, 196, 196);;  
+}
+
+.container_cabecalho{
+  display: flex;
+  flex-direction: row ;
+  background-color: rgb(224, 224, 224);
+  justify-content:space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.divclass1, .divclass2, .divclass3 {
+  margin: 10px;
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+.divclass1{
+  /*flex:1;*/
+  background-color: red;  
+}
+
+.divclass2{
+  /*flex:5;*/
+  background-color: green;  
+}
+
+.divclass3{
+  /*flex:1;*/
+  background-color:red;  
+}
+
+
+/* MENU */
+table {
+  color: black;    
+  text-align: center;
+  border-collapse: collapse;
+}
+
+tr {
+  height: 50px;
+}
+
+td {
+  width: 150px;
+  border:1px solid black;  
+  padding: 5px;
+}
+
+td:hover{
+  background-color: rgb(173, 173, 173);
+}
+
+
+
+
+
+/* RODAPÉ */
+
+.rodape {    
+    background:blue;
+/*    bottom: 0;
+    position: absolute;*/
+}
+
+.cabecalho, .rodape {    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
+    margin: 10px;    
+    padding: 10px;
+    font-size: 18px;
+/*    */
+}
+
+
+
+

@@ -1,0 +1,54 @@
+*{
+  margin: 0;
+  padding: 0;
+  
+}
+
+.container_cabecalho{
+  display: flex;
+  flex-direction: row ;
+  width: 100%;        
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+}
+
+.cabecalho{   
+  font-size: 18px;    
+}
+
+.divclass1{
+  flex: 1;
+  background-color: red;
+}
+
+.divclass2{
+  flex:2;
+  background-color: green;
+}
+
+.rodape {    
+    background:blue;
+/*    bottom: 0;
+    position: absolute;*/
+}
+
+.cabecalho, .rodape {    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
+    margin: 10px;    
+    padding: 10px;
+    font-size: 18px;
+/*    */
+}
+
+  
+  .resultado{
+    font-size: 88;
+    align-items: center;
+    text-align: center;
+    color: red;    
+  }
+
+  .lateral{
+    background-color: red;
+  }
