@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<Html>
+    <head>
+        <link rel="stylesheet" href="aula4.css" > 
+
+    </head>
+
+<body>
+
+
+    <!-- WIDTH E HEIGHT -->
+
+    <!--PARA AMBAS AS DEFINIÇÕES É POSSÍVEL INFORMAR ATRAVÉS
+    DOS SEGUINTES FORMATOS:
+
+    Em Pixels: 00px
+    Em Cm: 00cm
+    Em %: 00%
+        Em % o componente assumirá percentualmente o tamanho
+        do componente ao qual ele está inserido.
+
+        Posso ainda definir por meio de herança
+            width: INHERIT
+            - Dessa maneira, pegará o tamanho máximo do componente
+            ao qual ele está inserido.   -->
+
+
+
+    <!--WIDHT - LARGURA-->
+    
+    <div id="primeira">
+        <img src="https://www.google.com/google.jpg" >
+    </div>
+
+    <!-- posso ainda definir um tamanho máximo para a minha image=m
+    Essa propriedade sempre será prioritária.
+        max-width
+    -->
+        
+    <!--Ou posso ainda definir um tamanho mínimo para a imagem
+    O problema é que se ela for menor que o mínimo, aumentará e 
+    poderá estourar a imagem    
+        min-width
+    -->
+    <!--ATENÇÃO-->    
+    <!-- Ao realizar cálculos para especificação de tamanho de componente, se atente ao tamanho real de cada componente.-->
+
+    <div id="segunda">  </div>
+
+    <!-- Para corrigir o problema de expansão indevida, utilizamos um recurso muito útil.    
+    APLICAÇÃO DE ESTILIZAÇÃO PARA TODO O CONTEÚDO DA PÁGINA.
+    
+    CSS
+    *{
+        box-sizing: content-box - o tamamho é definido a partir do tamanho da 'caixa do conteúdo'
+        box-sizing: border-box - O tamanho é definido a partir da borda. logo, toda mudança de tamanho para
+        borda e padding será 'descontado' do tamanho total do elemento.
+
+        normalmente se utiliza também para zerar a borda da página
+        margin:0;
+    }
+    ----------------------------------------------------------------------------------------------------------->
+
+    <!--UTILIZAÇÃO DE LINKS POR MEIO DE ÂNCORAS-->
+
+    <!--Ancoras podem ser utilizadas para links externos,
+    mas principalmente serão usados para direcionamento entre
+    páginas dentro do mesmo site. -->
+    <br/>
+    <a href="https://google.com.br">CLIQUE PARA ACESSAR O GOOGLE </a>
+    <br/><br/><br/>
+    <a href="login.html" target="_blank">CLIQUE PARA ACESSAR A PÁGINA DE LOGIN </a>
+    <br/>
+    <!--Para organização será necessário organizar o nosso site em um PROJETO. -->
+    <a href="caminho/login.html">CLIQUE PARA ACESSAR A PÁGINA DE LOGIN </a>
+    <br/><br/>
+
+    <!-- Podemos abrir uma página de algumas maneiras (na mesma página ou em uma nova aba.) 
+        O atributo TARGET indica onde será aberto o link
+
+        target="_blank"
+    -->
+    
+    <!-- Podemos ainda dar um titulo para o link.
+        Atributo title="Pagina de Teste"   
+     -->
+
+
+     <!--LINK EM TUDO-->
+
+     <!-- Para atribuir um link ou tornar um elemento "clicável", barta colocarmos dentro
+    do proprio elemento Ancora. -->
+    <a href="http://www.google.com.br">
+        <img src="http://www.google.com.br/google.jpg" >
+    </a>
+
+
+    <!--A ANCORA SERVE PRA NOS ENVIAR PARA AREAS DO PROPRIO SITE-->
+    <!-- Basta atribuir um ID para os tributos da tela e a âncora direcionará para o elemento -->
+
+    <a href="#iddoelemento"> Ir para area X </a>
+
+    <!--ANCORA NO CSS-->
+    <!--
+        .link{
+            color: Blue;
+            font-size:30px
+
+        }
+        
+        -- Personalização em tempo real.
+
+        .link:hover -> { esse estado do css testa condicionalmente uma ação
+                        quando o mouse estiver sobre o elemento
+
+        }
+
+        .link:visited{ O que fazer quando o link já foi acessado.
+
+        }
+
+    -->
+
+
+    <!-- PRINCIPAIS TAGS DE CURSTOMIZAÇÃO DE FONTES -->
+    <!--
+            É possivel formatar um texto NO HTML e no CSS
+
+            - NEGRITO
+            B = NEGRITO, SOMENTE.
+            STRONG = NEGRITO + SEMANTICA DE IMPORTANCIA (PARA ENFASE EM TERMO DE LEITURA PARA ACESSIBILIDADE).
+
+            -ITALICO
+            I - SOMENTE COM SEMANTICA
+            EM - ITALICO COM SEMANATICA
+
+            <SMALL>
+                Inferioriza a página. Torna o texto menor, com menos enfase.
+
+             <DEL>
+                riscado
+                
+            <mark> 
+                Marcado com background
+
+            <sup> - joga levemente para cima o texto
+            <sub> - joga levemente para baixo o texto   
+
+        FORMATAÇÃO NO CSS.
+                LOREM IPSUM.
+
+            No css podemos formatar o texto
+            Atributos:
+                Color: Cor da fonte;
+                font-size: - tamanho da fonte;
+                font-weight - normal, bold;
+                font-family: - troca a familia de fontes do elemento;
+                    - Pode-se separar por virgula para caso a fonte especificada não existe.
+                    - Se não houver, ele considera o padrão do navegador;
+                text-align - alinhamento do texto; (left, right, center, justify)
+                text-decoration: decoração padrão do texto (line-trough, none, overline)
+
+                -----------------------------------------
+                Mais atributos:
+
+                
+
+
+
+
+
+
+
+    -->
+
+
+
+</body>
+
+</Html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+
+    <body>  
+        <h1>EVENTOS EM JSX.</h1>
+        <p>Por vezes, temos a necessidade de criar eventos para determinadas ações dentro da nossa págoina.
+           Sempre que houver essa necessidade, utilizamos um EVENTO. <br>
+
+           Os eventos são criados para tornar os elementos intetivos entre si. <br> <br>
+
+           <h2>
+             <b> Criando o evendo click de um botão: </b> <br>
+             
+             Criação do Botão: <br> 
+             < button onclick={}> CLIQUE AQUI < /button> <br>
+
+            </h2>
+            <br>
+            Perceba que agora temos um botão esperando uma ação mendiante a um click. <br> 
+            O evento <b>Onclick</b> é uma PROP do próprio botão que conectará uma ação criada pelo próprio desenvolvedor.
+
+            <h2> 
+                <b>Criando a função do click do botão.</b><br>
+
+                function handleButtonClick () { <br>
+                   Alert("O botão foi clicado.");     <br>
+                } <br>
+                <br>
+                <b>Conectando o evento criado ao botão:</b> <br>
+                 < button onclick={handleButtonClick}> CLIQUE AQUI < /button> <br>
+            </h2>
+            Assim, ao clicar no botão, a mensagem de alerta será exebida.
+        </p> <br>
+
+        <h1>STATE EM COMPONENTES</h1>
+        <P>
+            O state de un componente está relacionado ao seu ciclo de vida. <br>
+            <h2>
+                <b>Ciclo de vida natural do componente</b> <br>
+
+                É CRIADO -> MODIFICADO -> DESTRUÍDO.
+            </h2>
+
+            APÓS a sua criação, ele pode ser modificado em "TEMPO DE EXECUÇÃO" e isso modifica o seu estado original. <br>
+
+            <h2>
+                <b>EXEMPLO</b> <br>
+
+                let numero: number = 10; <br>
+                ...  <br>
+                return ( <br>
+                    < div> <br>
+                        O numero a ser exibido é: {numero} <br>
+                    < /div> <br>
+                ) <br>
+            </h2>
+
+            Para modificar o ESTADO atual do meu componente, basta eu modificalo, via EVENTO. Assim:
+
+            <h2> 
+                function handleButtonClick () { <br>
+                    numero += 10; <br>
+                } <br>                                
+            </h2>
+
+            Perceba que ao fazer dessa maneira, O ESTADO ATUAL do meu componente não é modificado, 
+            pois a linha de declaração da minha variável tem seu valor fixo atribuído. <br>
+            Dessa forma, ao modificar o ESTADO de um componente, toda a sua estrutura é recriada, fazendo assim, com que ele volte
+            ao seu ESTADO original.
+        </P>
+
+        <h1>Alterando o STATE de um Componente.</h1>
+        <P>
+            Assim sendo, não podemos simplesmente atribuir um valor a variável e esperar que ela seja RENDERIZADA
+            automaticamente. Precisamos fazer isso, via FUNÇÃO.
+
+            <h2>
+                <b>IMPORTANDO A BIBLIOTECA DE STATES</b> <br>
+                import {UseState} from 'react'; <br> <br>
+
+                <b>Criando constantes para a mudança controlada de valores:</b>
+                const [numero, setNumero] = UseState(0); <br>
+                const [nome, setNome] = UseState(0); <br><br>
+
+                <b> Alterando o valor da minha constante via função: </b> <br>
+                ... <br>
+                setNumero(10); <br>
+                setNome('Paulo'); <br>
+            </h2>
+
+            Dessa forma, nosso componente é modificado apenas em seus atributos que sofreram alteração e não no componente todo.            
+        </P>
+
+        <h1>PRÁTICA - DESAFIO</h1>
+        <b>PROJETO CONTADOR</b> <br>
+
+        Criar um contador movido por 2 botões. Um de "+" e outro de "-".  <br>
+         Ao clicar no "+" o sistema somará 1 ao contador e ao clicar no "-" o sistema sbtrairá 1 do contador. <br>
+
+         <br>
+
+         Deverá ser utilizado State e funções diferentes para botão.
+
+
+     
+    </body>
+    
+</html>

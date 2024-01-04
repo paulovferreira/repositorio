@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+
+    <body>        
+        <h1> Router - Rotas Dinamicas </h1>
+        <p>Por muitas vezes, precisamos criar rotas dinamicamente, em casos onde existam muitas páginas filhas. <br>
+            Afim de criar essas fotas de maneira automática, rezamos a criação em massa, dessa forma:
+        </p>
+        <h2>
+            < Route path="/sobrealuno/:parametro" element={ < SobreItemAluno/ >} />
+        </h2>
+        <br>
+        <p>
+            Para isso, precisaremos CRIAR a página <b>SobreItemAluno</b> para tornar seu direcionamento dinâmico.
+        </p>
+        <br>
+        <p>Isso fará com que o ROUTER identifique dinamicamente o parâmetro 
+            enviado e processe de acordo com uma ação específica do próprio usuário; <br> <br>
+            Ao acessar QUALQUER link após o subdominio "sobrealuno", o sistema direcionará sempre ao mesmo elemento, 
+            cabendo assim o tratamento de cada rota por parte do usuário segundo o parâmetro enviado.            
+        </p>
+        <h1>IDENTIFICANDO O PARÂMETRO RECEBIDO</h1>
+        <p>
+            Após preparar o Router para enviar esse parâmentro, nosso elemento <b>SobreItemAluno</b> precisa estar preparado para 
+            processar esse parâmetro.
+        </p>
+        <h2>
+            <b>Importando a biblioteca PARAM</b> <br>
+            import {useParams} from 'react-router-dom'; <br><br>
+
+            <b>Utilizando o parâmetro enviado:</b> <br>
+            Declaramos uma constante para armazenar esses paramentros. <br> <br>
+
+            const params = useParams(); <br> <br>
+
+            A partir de agora, todos os paramentros enviados estão dentro da constante: "PARAMS"; <br><br>
+            
+            Utilizando os parâmentro enviados: <br>
+            Essa é uma página sobre o aluno: {params.paramentro} <br><br>
+
+            "parametro" = nome do paramentro enviado.
+        </h2>
+
+
+        <h1>Redirecionamento de Páginas</h1>
+        <p>
+            Por vezes, será necessário navegar entre páginas do mesmo projeto ou ainda voltar para páginas
+            anteriores e fazer isso, por meio de links (âncoras) nunca é a melhor opção. <br>
+            Para isso, utilizamos o <b>NAVIGATE</b>.           
+        </p>
+
+        <h2>
+            <b>Importanto a biblioteca do Navigate</b> <br>
+            import {useNavigate} from 'react-router-dom'; <br><br>
+            
+            <b>Criando a constante para utilização do navigate:</b> <br>
+            const navigate = useNavigate();
+        </h2>
+        <p>
+            Agora podemos utilizar todos os recursos do navigate em nossa tela.
+        </p>
+
+        <h1>Criando botão VOLTAR</h1>
+        <p>
+            Para criar o botão voltar, faremos o uso da constante NAVIGATE.            
+        </p>
+        <h2>
+            <b>Criando o botão voltar:</b> <br>
+            < button onClick={handleVoltar}> Voltar < /button> <br><br>
+
+            <b>Criando a função handleVoltar</b> <br>
+            function handleVoltar(){ <br>
+                navigate(-1); <br>
+            } <br>
+        </h2>
+        <br>
+        Dessa maneira, podemos criar botões para navegar em qualquer ação dentro do nosso JSX.
+
+        <h1>Criando botões para rotas específicas:</h1>
+
+
+        <h2>
+            <b>Criando o botão de navegação</b> <br>
+            < button onClick={handleHome}> Voltar para Home < /button> <br><br>
+
+            <b>Criando a função handleHome</b> <br>
+            function handleVoltar(){ <br>
+                navigate('/'); <br>
+            } <br>
+
+            Neste formato, podemos utilizar o botão para direcionar para qualquer link, 
+            bastando informar a rota criada no seu arquivo padrão de rotas.
+        </h2>
+
+
+        <h1> PRÁTICA </h1>
+        <P>
+            Criar os botões de navegação Voltar em todas as páginas do seu projeto, utilizando NAVIGATE.
+        </P>
+
+        
+                
+
+
+    
+    
+    </body>
+</html>

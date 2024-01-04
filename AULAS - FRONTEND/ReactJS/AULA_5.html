@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+
+    <body>
+
+        <h1>FLEXBOX </h1>
+
+        <p>Caixas Flexiveis são utilizadas para montagem do Layout de páginas HTML de maneira responsiva e auto organizável. <br>
+           Com caixas flexíveis é possivel prever e determinar que os elementos jamais sairão da posição onde foram construídos
+           de maneira desordenada.
+
+           <br><br>
+           Todo elemento flexível, parte de um container, ou seja, uma DIV. <br>
+           Quem determinará que o conteiner criado será flexível sempre será o CSS.
+
+           <h2>
+                <b>NO HTML</b> <br>
+                < DIV ClassName="container">< /DIV>
+                <br><br>
+                <b>NO CSS</b><br>
+                .container{<br>
+                    display: flex;         <br>
+                }  <br><br>
+           </h2><br>
+           <p>A partir da criação do seu conteiner principal, a criaçao dos itens 
+                internos do conteiner passarão a respeitar o elemento PAI.</p>
+           <br>
+
+           <h1> FLEX-DIRECTION</h1>
+           <p>A propriedade flex flex-direction, utilizada no seu conteiner principal, 
+            ditará como os elementos deverão se comportar dentro do elemento conteiner principal.</p>
+
+            <h2>
+                <b> ROW </b><br>
+                Os elementos se ordenarão dentro da mesma Linhas. <br> 
+                <b> COLUMN </b><br>
+                Os elementos se ordenarão dentro da mesma Coluna. <br>
+            </h2>
+
+            <h1>DIV -> DIV</h1>
+            <p>A organização dos elementos dentro de uma Div flexível passa a ser realizada por outras DIVs sempre que
+                necessário. Tornando assim, a construção do layout do site muito mais ordenada e controlável.
+            </p>
+
+            <h2 class="h2esquerda">
+                <b>NO JSX</b><br>
+                function cabecalho(){ <br>
+                    return( <br>
+                       < div className=<b>'container_cabecalho'</b>>        <br>
+                          < div className=<b>'divclass1'</b> teste    < /div> <br>
+                
+                          < div className='<b>divclass2'</b> > <br>
+                            < Menu />   <br>
+                          < /div> <br>
+                
+                          < div className=<b>'divclass3'</b>> Logout < /div> <br>
+                       < /div> <br>
+                    ) <br>
+                } <br>
+            </h2>
+
+            <br><br>
+            <h2 class="h2esquerda">
+                <B> NO CSS </B> <br>
+                .container_cabecalho{<br>
+                    display: flex;<br>
+                    flex-direction: row ;<br>
+                    background-color: gray;<br>
+                  }<br><br>
+                  
+                  .divclass1, .divclass2, .divclass3 {<br>
+                    margin: 10px;<br>
+                    padding: 10px;<br>
+                  }<br><br>
+                  
+                  .divclass1{<br>
+                    flex:1;<br>
+                    background-color: red;  <br>
+                  }<br>
+                  <br>
+                  .divclass2{<br>
+                    flex:5;<br>
+                    background-color: green;  <br>
+                  }<br>
+                  <br>
+                  .divclass3{<br>
+                    flex:1;<br>
+                    background-color:red;  <br>
+                  }<br>
+
+            </h2>
+
+            <h1>DIVS INTERNAS - definição de largura</h1>
+            <p>Posso definir as larguras das minhas DIVs dentro de Conteiners de muitas maneiras,
+                de acordo com a necessidade da aplicação, porém, existem duas maneiras mais tradicionais:
+            </p>
+
+            <h2 class="h2esquerda">
+                <b>Com o convencional WIDTH </b> <br>
+                Dessa maneira, a largura do seu componente se tornará FIXA de acordo com o especificado <br>
+                <b>WIDTH: 100px; </b> <br> <br>
+
+                <b>UTILIZANDO FLEX </b> <br>
+                O FLEX permite que o tamanho da sua DIV interna seja variável de acordo com o escopo onde está inserida, ou seja,
+                de acordo com o tamanho do seu pai. <br> <br>
+
+                A especificação do valor da propriedade FLEX é: <br>
+                1 = 100% do tamanho. <br>
+                A medida que o valor de FLEX aumenta, ele divide proporcionalmente 
+                os elementos de modo que se encaixem perfeitamente. <br> <br>             
+
+            </h2>           
+
+            <h1>PRÁTICA</h1>
+            <P>
+                - Reformular seu arquivo INDEX.TSX do cabeçalho para torná-lo Flexível <br>
+                - O cabeçalho deverá conter 3 divisões. <br>
+                - 1) Imagem circular contendo a foto do usuário <br>
+                - 2) Itens de Menu <br>
+                - 3) Link para Logout/Login; <br>
+            </P>
+
+
+
+
+
+
+
+
+
+
+        </p>
+        
+
+    </body>
+    
+</html>

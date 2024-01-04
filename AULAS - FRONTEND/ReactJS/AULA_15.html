@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+
+    <body> 
+        <h1>RENDERIZANDO CONTEÚDO CONDICIONAL</h1> 
+        <p>
+            Por vezes será necessário exibir ou não determinado componente ou divisão na tela a depender de uma condição pré estabelecida. <br>
+            É o caso classico de elementos de "Aguarde" exibidos enquanto dados são buscados na base de dados.            
+        </p>
+
+        <h2 class="h2esquerda">
+            <b>criando a constante para armazenar o estado do componente.</b> <br>
+                cont[show, setShow] = useState(false); <br> <br>
+            
+                Após criar a constante, será necessário criar um botão para executar a modificação da constante. <br>
+                < button> MOSTRAR < /button> <br> <br>
+
+                Logo após o botão, vou criar a DIV que irá ser exibida ou não, a partir da verificação da minha constante. <br> <br>
+
+                < div> <br>
+                    ESTE TEXTO SÓ SERÁ EXIBIDO SE O SHOW FOR = A TRUE. <br>
+                < /div> <br> <br>
+
+                <b>VERIFICAÇÃO CONDICIONAL</b> <br> <br>
+
+                {show === true && <br>                
+                    < div> <br>
+                        ESTE TEXTO SÓ SERÁ EXIBIDO SE O SHOW FOR = A TRUE. <br>
+                    < /div> <br>
+                } <br>
+        </h2>
+
+        <p>Diante disso, posso criar um evento no meu botão para alterar o estado da minha constante SHOW</p>
+
+        <h2 class="h2esquerda">
+            <b>Criando a função para o evento</b> <br>
+
+            function handleClickMostrar (){ <br>
+                setShow(true); <br>
+            } <br> <br>
+
+            Chamando a função criada no evento Click: <br>
+            < button onclick="handleClickMostrar"> Mostrar < /button> <br> 
+        </h2> 
+
+        <p>Posso ainda tornar o meu botão dinamico, alterando o status visual do meu elemento atravez do click do botão.</p>
+        <br>
+
+        <h2 class="h2esquerda">
+            if(show){ <br>
+                setShow(false) <br>
+            } else { <br>
+                setShow(true) <br>
+            } <br>
+        </h2>
+
+        <p>
+            Podemos ainda trabalhar a alteração de vários componentes simultâneamente mediante a alteração da mesma variável.
+        </p>
+
+        <h2 class="h2esquerda">
+            <b>Para isso, utilizamos código JS puro</b> <br>
+
+            < button onclick="handleClickMostrar"> <b>{ show ? "Ocultar" : "Mostrar" }</b> < /button> <br> 
+        </h2>
+
+        Dessa maneira, nossos elementos são exibidos / ocultados e o texto do botão também é alterado.
+
+    
+
+    </body>
+
+</html>

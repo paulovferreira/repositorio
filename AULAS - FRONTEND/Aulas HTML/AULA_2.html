@@ -1,0 +1,123 @@
+<!--
+    IDENTAÇÃO
+    - Sempre é utilizado em todas as linguagens de programação.
+    - Primordial para organização do código.
+
+    - Simples de ser utilizado com tab.
+
+    - As tags sempre iniciam e terminam na mesa posição.
+-->
+
+
+<!-- TAGS BÁSICAS 
+<html> - inicio do documento
+<head> - cabeçalho
+    <h1>
+    <h2>    
+    <h3>    - servem para motores de buscas nos cabeçalhos. Ditam divisores de conteúdo
+
+    <p> - tag de parágrafo
+        - Serve para quebras de linha e organização de textos
+        - Ele formata quebras de linha.
+    
+    <a> - âncora
+        - É sempre acompanhada de um atributo (href)
+        - Serve para ser uma âncora para outros links.
+
+    <img> - Imagem
+          - Sempre acompanhada do atributo (SRC - Source)
+          - Acompanhado do atributo alt - Texto alternativo a Imagem, caso necessário;
+          - Widht e Hegth
+          - Não quebra linha por padrão.
+        
+    <button> - Botão;
+             - Serve para ação de tela;
+
+    <br/> - Quebra de linha 
+          - Quanto mais, mais quebras.
+          
+    <ul> - Linha desordenada
+         - Serve para criação de listas   
+        <li> - Itens da Lista
+             - São is itens da lista de maneira desordenada.
+
+    <ol> - Lista Ordenada
+         - Troca os marcadores por identificação.
+-->
+
+
+
+
+<!-- CSS
+    - O QUE É?
+        - Cada Tag possui sua forma padrão de exibição.
+        - O CSS é a roupagem do HTML.
+        - O Formato visual do código.
+            - Torna mais apresentável.
+   
+       - Tudo que é especificado no atributo Style é direcionado para o CSS.
+
+    - 3 FORMAS DE INCLUIR O CSS NO CÓDIGO.
+
+
+        - 1. CSS INLINE
+            - Na mesma linha da minha tag 
+            - Utiliza o Style como caminho pra customização.
+-->
+<h1 style="color:red;font-size:14px;"></h1>TEXTO PERSONALIZADO</h1>
+<img src="https://www.apaulista.org.br/wp-content/uploads/2018/10/CLIQUE-AQUI-e1398349711367-300x280.png" style="font-size:30px"></img>
+<img src="https://www.apaulista.org.br/wp-content/uploads/2018/10/CLIQUE-AQUI-e1398349711367-300x280.png" style="font-size:30px;width:100px;height:100px"></img>
+<!--             
+        - 2. CSS INTERNO
+            - Especifica de maneira geral, no próprio HEAD da página, como será o comportamento da tag.
+            - Pode ser especificado 
+-->
+<head>
+    <meta charset="UTF-8">
+    <style>
+        h1 { 
+               color:blue; 
+               font-size: 15px;               
+           }
+        a {
+                color:green;
+                font-weight: bold;
+          }               
+    </style>
+</head>
+
+
+<!--
+        - 3. CSS EXTERNO
+        - Cria-se um novo arquivo e refenciamos ele dentro do código.
+        - A referencia dele é realizada dentro do HEAD da página.
+        - Todo o código css de personaliação irá para o meu arquivo estilo.css              
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+
+<!--
+arquivo estilo.css ficará assim:
+
+        h1 { 
+               color:blue; 
+               font-size: 15px;               
+           }
+        a {
+                color:green;
+                font-weight: bold;
+          }    
+
+-->
+
+
+
+
+
+<h1 style="color:red;font-size:14px;"></h1>TEXTO PERSONALIZADO</h1>
+<img src="https://www.apaulista.org.br/wp-content/uploads/2018/10/CLIQUE-AQUI-e1398349711367-300x280.png" style="font-size:30px"></img>
+<img src="https://www.apaulista.org.br/wp-content/uploads/2018/10/CLIQUE-AQUI-e1398349711367-300x280.png" style="font-size:30px;width:100px;height:100px"></img>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+
+    <body>  
+        <h1>COMUNICAÇÃO ENTRE COMPONENTES.</h1>
+        <p>É primordial tornar os componentes comunicáveis entre si para que possamos 
+            ter maior controle sobre os elementros criados em uma página e também 
+            expandir a utilização do componente tornando-o mais flexível.</p>
+
+        <h1>Comunicação do PAI > FILHO</h1>    
+        <p>
+            A Comunicação que vai do componente pai para o componente filho, pode ser realizada por meio de PROPS. <br>
+            Essas props servirão para que um valor seja levado e possa assim ser utilizado pelo filho de acordo com sua necessidade. <br>
+
+            
+            <h2 class="h2esquerda">
+                <b>RELEMBRANDO</b> <br> <br>
+
+                <b>No componente filho:</b> <br>
+
+                type Props = {<br>
+                    text: String<br>
+                }<br>
+                <br>
+                ...<br>
+                <br>
+                function BOTAO (propriedades: Props ) {<br>
+                    return(<br>
+                        < div><br>
+                            Minha propriedade text é: propriedade.text;<br>
+                            <br>
+                        < /div><br>
+                    )<br>
+                    <br>
+                }<br>
+                <br>
+                <b>No componente pai:</b> <br>
+                < Botao text="Botão de teste" />
+            </h2>
+        </p>
+
+        <h1>Comunicação do FILHO > PAI</h1>    
+        <p>
+            Por vezes será necessário retornar uma informação do componente filho para o componente pai. <br>
+            Normalmente é utilizado para retornar o resultado de um processamento que existirá dentro do componente
+            para que seja verificada a efetividade da rotina, etc... <br>
+            O seu uso pode ser muito extenso, mas o importante é que seja de fácil utilização para necessidades específicas.
+        </p>
+
+        <h2 class="h2esquerda" >
+            <b>Criando a ação de evento do elemento filho.</b> <br>
+            Para essa fase, precisaremos criar um evento no botão dentro do componente filho. <br>
+            <br>
+            function handleClick () {<br>
+                Alert("CLICOU NO BOTÃO.");<br>
+            }<br>
+            <br>
+            return(<br>
+                < button onClick{handleClick} > Botao < /button><br>
+            )<br>
+            <br>           
+        </h2>
+        <p>Essa ação fará com que o evento seja disparado dentro do componente filho somente, sem nenhuma interação com o pai. <br>
+            Para interagir com o elemento pai, este deverá implementar a função que deseja executar. Assim:            
+        </p>
+
+        <h2 class="h2esquerda">
+            <b>Implementando a função no pai:</b> <br>
+            <p>
+                Essa função será enviada por parâmetro para que seja executada dentro do componente filho.
+            </p>
+
+            function botaoEventAction () { <br>
+                Alert("Evento disparado no componente pai!") <br>
+            } <br>
+        </h2>
+        <p>
+            Até aqui, apenas criamos a função, agora, precisamos enviar essa função 
+            para que ela possa ser chamada a partir do seu filho. <br>
+            Neste momento, passamos a função que deverá ser executada no filho, VIA PROP. Assim:
+        </p>
+        <h2 class="h2esquerda">
+            <b>Passando a função, via PROP para o componente filho</b> <br>
+            (No pai)<br>
+            ...<br>
+            return(<br>
+                < div><br>
+                    < Botao text="Texto do botão" onClickFN={botaoEventAction}<br>
+                < /div><br>
+            ) <br>
+        </h2>
+
+        <p>Agora Precisamos criar a PROP no filho para receber a função.</p>
+
+        <h2 class="h2esquerda">
+
+            <b>Criando a PROP</b> <br>
+            type Props = {<br>
+                text: String<br>
+                onClickFN: () => void<br>
+            }<br>
+
+            <b>Observação</b> <br>
+            O VOID sinaliza que essa função não terá retorno. Apenas executará o seu conteúdo. <br><br>
+
+            <b>No OnClick do meu botão, agora posso chamar a função que recebi por PROP.</b> <br>
+            ...<br>
+            return(<br>
+                < div><br>
+                    < Botao text="Texto do botão" onClick={onClickFN}<br>
+                < /div><br>
+            ) <br><br>
+
+            <b>Observação:</b> <br>
+                Não preciso conhecer o nome da função original para executá-la dentro do filho.
+        </h2>
+
+        <p>
+            Podemos ainda, receber um parâmetro de dentro do componente pai para que ele seja retrabalhado. <br>
+            É o classico exemplo de tratamento de erros no componente filho para a execução de uma função qualquer.            
+        </p>
+
+        <h2 class="h2esquerda">
+            <b>Criando parâmetro na PROP da função interna. </b> <br>
+            type Props = {<br>
+                text: String<br>
+                onClickFN: ( <b>texto: string</b> ) => void<br>
+            }<br> <br>
+
+            <p>
+                Para isso, vamor criar um função local handleClick, para que ela possa executar a função recebida por parâmetro.
+            </p>
+            <br>
+            function handleClick (texto: String) {<br>
+               onClickFN("OLÁ, VIM DO COMPONENTE FILHO. ")  <br>
+            }<br>
+        </h2>
+
+        <p>Por fim, no componente pai, basta criar o parâmetro a ser recebido da execução a partir do componente filho.</p>
+
+        <h2>
+            function botaoEventAction (txt: String) { <br>
+                Alert("Evento disparado no componente pai! Resposta: " + txt) <br>
+            } <br>
+        </h2>
+
+    </body>
+
+</html>

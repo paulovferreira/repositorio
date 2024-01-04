@@ -1,0 +1,155 @@
+<!--
+    REGRAS GERAIS DE CSS
+
+        - Ao especificar o elemento no css, o estilo é aplicado para todos os elementos da tela.
+        - Posso especificar um estilo para um elemento único.
+        - Atribuindo o ID dos elementos.        
+-->
+<h1 id="titulo"> título do texto </h1>
+
+<!--
+        - Ao especificar dessa maneira, no meu css (estilo.css) posso referenciar apenas esse elemento.
+-->
+
+#titulo {
+    color: red;
+    font-size = 30px
+}
+
+<!--
+        - Posso ainda atribuir o estilo atravez da criação de classes de componentes.
+        - Posso atribuir a classe para vários elementos
+            - Não necessariamente do mesmo tipo;
+-->
+
+<h1 class="textopadrao" > título do texto </h1>
+<p class="textopadrao"> Paragrafo</p>
+<h2 class="textopadrao"> Titulo 2 </h2>
+
+<!--
+        - No css, preciso especificar como será a formatação da classe.
+        - Especifico o modelo com . (ponto)
+-->
+
+.textopadrao {
+    color: red;
+    font-size = 30px
+}
+
+<!--
+    - Posso ainda atribuir formatações específicas para uma classe e um id simultaneamente.
+    - Ele aplicará o mesmo estilo para ambos os elementos, tanto ID quando a classe.
+
+    O mesmo se aplica para N elementos. Serão listados com separador ,
+-->
+
+#titulo, .textopadrao {
+    color: red;
+    font-size = 30px
+}
+
+#elemento1, 
+#elemento2,
+#elemento3,
+#elemento4, {
+    color: red;
+    font-size = 30px
+}
+
+<!-- 
+    - Ainda posso tratar apenas elementos entro de outros elementos (elementos filhos)
+    - dessa forma, sem a separação por virgula, o compilador mudará apenas o conteúdo da tag LI dentro da tag LU.
+-->
+
+ul li{
+    color:pink;
+
+}
+
+
+<!-- TODAS AS POSSIBILIDADES -->
+NOME_DO_ELEMENTO{
+
+}
+
+#ID{
+
+}
+
+.CLASSE{
+
+}
+
+ELEMENTO_CLASSE, OUTRO_ELEMENTO_CLASSE{
+
+}
+
+ELEMENTO OUTRO ELEMENTO{
+
+}
+
+
+<!-- CORES EM CSS -->
+<!-- FORMAS DE DEFINIR CORES-->
+<!-- 1 - ATRAVEZ DO NOME -->
+H1{
+    BACKGROUND-COLOR: RED; <!-- DEFINE BACKGROUD DE ELEMENTOS -->    
+}
+
+<!-- 1 - ATRAVEZ DE RGB -->
+PODEMOS DEFINIR POR MEIO DE RGB:
+R = red
+G = green
+B = Blue
+
+<!--Exemplos-->
+Preto:
+R = 0%
+G = 0%
+B = 0%
+
+Branco:
+R = 100%
+G = 100%
+B = 100%
+
+<!-- Para definir os valores os percentuais são definidos de 0 a 255 onde 0 = 0% e 255 = 100% -->
+
+<!-- 2 - PODEMOS DEFINIR POR MEIO DE HEXADECIMAL -->
+143624F
+onde
+2 DIGITOS = VERMELHO
+2 DIGITOS = VERDE
+2 DIGITOS = AZUL
+
+<!-- FORMAS DE DEFINIR -->
+DE 0 a 9 E LETRA = DE A a F
+ONDE 0 É A MENOR PROPORÇÃO (0%) E F A MAIOR PROPROÇÃO;  
+
+
+<!--BORDAS-->
+
+<!--PARA ESPECIFICAR BORDAS BASTA UTILIZAR OS ATRIBUTOS ABAIXO:-->
+
+H1 {
+    border: 5px solid red;
+                dotted
+                dashed
+                double
+                groove
+    onde
+    border: tamanho tipo cor
+
+}
+
+
+<!--bordas em alguns lados.-->
+BORDER = Todas as BORDAS
+BORDER-LEFT
+BORDER-BOTTON
+BORDER-TOP
+BORDER-RIGHT
+
+<!--BORDAS ARREDONDADAS-->
+BORDER-RADIUS: 5px
+Possivel fazer bolas quando o raio é 50% do tamanho do elemento de origem

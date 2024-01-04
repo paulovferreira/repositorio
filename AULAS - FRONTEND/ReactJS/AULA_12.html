@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+
+    <body>  
+        <h1>MODIFICAÇÃO DO STATE DE INPUTS</h1>
+        <p>
+            Inputs são componentes para inserção de textos que servem para diversas 
+            finalidades e principalmente para criação de cadastros.
+            <br>
+            A alteração do seu ESTADO se dá de maneira diferente dos demais componentes.
+            <br>
+            Sua altearção se dará por meio do evento <b>onChange</b> que capta a modificação em tempo real.            
+        </p>
+
+        <h2 class="h2esquerda">
+            <b>IMPORTANDO BIBLIOTECAS</b> <br>
+            import React from 'react'. <br>
+            import {UseState} from 'react'; <br> <br>
+
+            <b>Criando constantes para os valores do input</b> <br>
+            const [name, SetName] = useState(''); <br><br>
+
+            <b>Criando função para alteração do valor da constante </b> <br>
+
+            function handleInput (event: React.ChangeEvent<HTMLInputElement>) { <br>
+                SetName(event.target.value); <br>
+            } <br> <br>
+
+            <b>Criando o retorno visual do componente. </b> <br>
+            return( <br>
+                < div> <br>
+                    Nome: <br>
+                    < input type="text" value={name} onChange={handleInput} />  <br>
+                    < hr> <br>
+                    Seu nome é: {handleInput} <br>
+                < /div> <br>
+            ) <br>
+        </h2>
+
+        <h1>PRÁTICA - CRIANDO FORMULÁRIOS</h1>
+
+        1) Escolher um formulário do seu projeto para criá-lo. <br>
+        Escolha seu menor formulário
+        <br><br>
+        2) Abaixo dos inputs do seu formulário, Criar eventos para atualizar um texto, que seja alterado em tempo real de acordo com o digitado em seu formuário.
+    </body>
+
+</html>

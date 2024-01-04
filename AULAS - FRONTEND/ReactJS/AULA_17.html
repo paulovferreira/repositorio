@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+
+    <body> 
+        <h1>ASYNC / AWAIT</h1> 
+            <p> Esse conceito é puramente do JavaScript e é previsto exatamente para tratar processamentos paralelos dentro de 
+                aplicativos Web. <br>
+                Não conseguimos garantir que um processo aguardará a conclusão de outro processo para que seja executado.                 
+            </p>
+
+            <h2>
+                Por meio de um simples ALERT podemos verificar o funcionamento dos processos assincronos. <br>
+                <b>alert('Processo executado.')</b> <br> <br>
+                Verifique o arquivo requisicoesTypesAsync para mais detalhes.
+            </h2>
+
+
+        <h1>Trabalhando com LOAD.</h1>    
+        <p>Ao carregar a página é possível ver que existe um certo DELAY entre a requisição e o resultado da tela. <br>
+            para tratar esses casos, precisaremos criar um LOADING para aperfeiçoar a interação com o usuário final do sistema.
+        </p>
+
+        <h2>
+            <b>Para isso, criaremos uma constante para sinalizar se o sistema está processando ou não a rotina externa.</b> <br>
+
+            const [loading, setLoading] = useState(false); <br> <br>
+
+            Consulte a utilização prática do Loading no arquivo <b>requisicoesTypesAsync.tsx</b> 
+        </h2>
+
+
+        <h1>Lidando com ERROS de carregamento</h1>
+        <p>
+            No momento do carregamento de nossas informações via API, podem ocorrer falhas que impossbilitem o carregamento
+            da página e para isso, nosso código deverá estar preparado.
+
+            <h2 class="h2esquerda">
+                <b>TRY CATCH</b> <br> <br>
+
+                try { <br>
+                    Tente executar esse comando. <br>
+                } catch (e) { <br>
+                    Se der falha, execute isso: <br>
+                    setLoading(false) <br>
+                    alert('Falha ao carregar informações, tente mais tarde.') <br>
+                    console.error(e); <br>
+                } <br> <br>
+                Consulte o exemplo completo em requisicoesTypesAsync.tsx
+
+            </h2>
+        </p>
+
+
+
+
+            
+    </body>
+    
+</html>

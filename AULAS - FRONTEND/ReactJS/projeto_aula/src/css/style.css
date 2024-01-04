@@ -1,0 +1,17 @@
+.cabecalho {
+    background-color: aquamarine;
+    position: top;
+    height: 70px;
+
+}
+
+
+
+
+.rodape {    
+    background:blue;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    height: 70px;
+}

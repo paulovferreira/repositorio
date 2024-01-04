@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+
+    <body>
+
+        <h1>COMPONENTIZAÇÃO DO CABEÇALHO E RODAPÉ DA PÁGINA </h1>
+
+        <p> <b> CRIAÇÃO DOS COMPONENTES </b> </p>
+        <p>
+            Uma vez criado nossos cabeçalhos e rodapés das páginas, podemos criar links de referencia 
+            para páginas já existentes ou para nossas nossas novas páginas.
+        </p>
+
+        <p> <b> CRIANDO TABELAS PARA ORGANIZAÇÃO DO CABEÇALHO.</b> </p>
+        Neste primeito momento, vamos criar uma tabela para ciar um menu no cabeçalho da nossa página.
+        <br/>
+        Para isso,vamos utilizar a estrutura já conhecida abaixo:
+
+        <h2>        
+            < table>
+                < tr>
+                    < td>< /td>
+                < /tr>            
+            < /table>        
+        </h2>
+           
+        O Menu ficará parecido com o menu abaixo:
+
+        <table> 
+            <tr>
+                <td>menu 1</td>
+                <td>menu 2</td>
+                <td>menu 3</td>
+                <td>menu 4</td>
+                <td>menu 5</td>
+                <td>menu 6</td>
+            </tr>
+        </table>
+
+        <h1>UTILIZANDO VARIÁVEIS PARA NOMEAÇÃO DO MENU</h1>
+        <p> Para facilitar e tornar o código mais estruturado, não utilizaremos os nomes dos menus de maneira explicita no código. <br>
+           Com JAVASCRIP é possível referenciar essa informação de maneira <mark> VARIÁVEL </mark> para que se torne dinamica.
+        </p>
+
+        <p><b>Para isso, utlizamos o JAVASCRIP PURO declarando as variáveis essa forma:</b></p>
+
+        <h2>
+            let [variavel]: string = "[valor]";
+        </h2>
+
+        <p><b>Para utilizar a variável criada, basta referenciá-la assim:</b></p>
+        <h2>
+            Olá, o conteúdo da minha variável é: {variavel}
+        </h2>
+
+        <br>
+
+        <h1>TRABALHANDO COM VARIÁVEIS JAVASCRIP</h1>
+        <p>
+            O REACT.JS permite perfeitamente a junção dos códigos JS nativos e o JSX para retornar variáveis aos usuários.
+
+            Podemos por exemplo, implementar funções para retornar valores calculados, como no exemplo abaixo:
+
+            <h2>
+                let n1: number = 5; <br>
+                let n2: number = 10; <br>
+
+                function somar(numero1: number, numero2: number): number{ <br>
+                    return numero1 + numero2; <br>
+                } <br>
+
+                return ( <br>
+                    < div> A soma dos valores é: {somar(n1 ,n2)} </ div>
+                )
+            </h2>
+
+        </p>
+
+        
+        <h1>CRIANDO LINKS PARA O MENU. </h1>
+        <p> Ao utiliar uma tabela no padrão HTML, podemos simplesmente especificar nossos links em elementos dentro da propria
+            tabela utilizando as famosas ANCORAS.
+        </p>
+
+        <p><b>CRIANDO LINKS PARA PÁGINAS HTML EXTERNAS</b></p>
+        <p>
+            Para criar um link para uma página externa, primeiro é preciso torná-la conhecida pelo projeto para que 
+            o servidor possa encontrá-la.
+            <br/>
+            <b> Podemos fazer de duas maneiras: </b>
+            <br> <br>
+            1) Colocando nossa página HTML dentro do projeto em que estamos... <br>
+            2) Componentizando nossos elementos <b>(SEMPRE SEMPRE SERÁ O CORRETO)</b>
+        </p>
+
+        <h1>PRÁTICA </h1>
+        <p> Criar o menu, utilizando variáveis e referenciar os arquivos via âncora </p>
+        <p> Importar as páginas existentes para o projeto em páginas externas</p> 
+        <p> Componentizar uma das nossas atividades e criar o link para a página INDEX do projeto</p>
+        
+    </body>
+</html>

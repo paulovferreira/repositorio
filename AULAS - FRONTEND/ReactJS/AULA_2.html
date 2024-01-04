@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+
+    <body>
+
+        <h1>ESTRUTURAS DE PROJETO</h1>
+
+        <p> <b> PROJETO CRA X PROJETO Vite </b> </p>
+        <p>
+            <b>CRA</b> <br/>
+            Em um projeto CRA, observamos a pastar PUBLIC.
+                - Armazena todos os arquivos de inicialização do projeto. <br/>
+                - Dentre eles o INDEX.HTML <br/>
+                - Basicamente aponta para uma única DIV onde será carregado todo seu site.
+
+
+             <b>Vite</b> <br/>    
+             Os arquivos de inicialização ficam na Raiz <br/>
+             - O arquivo index.html é mais "limpo" e além de carregar a div, já inicia o código JAVA Script;
+        </p>
+
+        <h1>O apontamento da DIV ROOT</h1>
+        <P>
+            <b>CRA</b> <br/>
+            - O primeiro arquivo a ser carregado é o index.tsx <br/> <br/>
+            <b>Vite</b> <br/>
+            - O primeiro arquivo a ser carregado é o main.tsx
+            <br/>
+            <br/>
+            <b>Ambos tem a mesma função e possuem o mesmo objetivo: INICIAR UMA DIV DO MEU INDEX.</b>
+            <br/><br/>
+            <b>NESTE MOMENTO CONVÉM SABERMOS QUE:</b><br/>
+                - O Index do projeto está em lugares distintos. <br/>
+                - A aplicação de fato, o CÓDIGO FONTE, está na pasta SRC.<br/>
+                - Todos os arquivos externos (imagens etc...) devem ficar na pasta PUBLIC.
+        </P>
+        <h1>MEU PRIMEIRO COMPONENTE</h1>
+            <p>
+                <b>Tudo em React, É COMPONENTE.</b> <br/>
+                No react, componentes são traduzidor por <mark> FUNÇÕES </mark> que retornam algo gráfico. <br/><br/>
+                
+                Como já vimos, o arquivo principal (index ou main) , aponta para um arquivo que retornará oque deverá ser exibido na tela. <br/>
+                <mark> Se o MAIN importa algo, o APP, precisa exportar algo. </mark> <br/>
+
+                <h3>Praticando:</h3>
+                1 - Apague todo o conteúdo do arquivo APP.tsx (na pasta source) <br/>
+                2 - Vamos criar uma função para retornar um texto: "olá mundo" <br/>
+
+                Para isso:
+
+                <h2>
+                    function App() { <br/>
+                        return(  <br/>
+                          < div>Olá Mundo!< /div> <br/>
+                        ); <br/>
+                      }                      <br/>
+                      export default App;<br/>
+                </h2>
+            </p>
+
+            <h1>JSX</h1>
+            <p>
+                O Código digitado dentro do nosso APP.tsx é um código <mark> typescript </mark>; <br/>
+                O código é identico a sintaxe do HTML, porém é uma especificação do HTML que retorna um componente
+                <h2>
+                    function App() { <br/>
+                        return(  <br/>
+                          < div>Olá Mundo!< /div> <br/>
+                        ); <br/>
+                      }                      <br/>
+                      export default App;<br/>
+                </h2>
+                Poderiamos também criar também utilizando <mark> JAVASCRIPT NORMAL.</mark> <br/>
+                <h2>
+                    import React, { createElement } from "react";<br/>
+
+                    function App() {<br/>
+                      return( <br/>
+                        React.createElement('Div', null, 'MEU NOME NÃO É JHONNY.' )<br/>
+                        /* ONDE OS PARAMETROS SÃO:<br/>
+                            - Elemento<br/>
+                            - Atributos<br/>
+                            - Valor<br/>
+                        */ <br/>
+                      );<br/>
+                    }<br/>
+                    
+                    export default App;<br/>
+
+                </h2>
+                <mark>A FACILIDADE DE TRANSFORMAR O JAVASCRIP EM UM PSEUDO HTML, SE CHAMA JSX. </mark> <br/>
+                Antes de exibir na tela, o código é convertido por um compilador. No typescript o <B>BABEL</B> <br/><br/>
+                Outro exemplo: <br/>
+                <h2>
+
+                    import React, { createElement } from "react";<br/>
+
+                    function App() {<br/>
+                    return(  <br/>
+                        React.createElement('a', {<br/>
+                        href:"https://google.com.br"}, <br/>
+                        'VAI PRO GOOGLE!' )<br/>
+                    );<br/>
+                        /* ONDE OS PARAMETROS SÃO:<br/>
+                            - Elemento<br/>
+                            - Atributos<br/>
+                            - Valor<br/>
+
+                            É EQUIVALENTE A:<br/>
+                        */ <br/>
+
+                        return (< a href="https://google.com.br" > VAI PRO GOOGLE!</a>)<br/>
+
+                        <br/>
+                    }<br/>
+                    <br/>
+                    export default App;<br/>
+                </h2>
+            </p>
+
+            <h1>PRÁTICA</h1>
+            <p>Criando um elemento para o cabeçalho e rodapé da nossa página.</p>
+    
+
+        
+    </body>
+</html>

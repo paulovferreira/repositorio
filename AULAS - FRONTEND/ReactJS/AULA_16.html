@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+
+    <body> 
+        <h1>REQUISIÇÕES</h1>            
+        <p>Requisições são a base de todo sistema integrado. É por meio delas que podemos integrar nossos sistema a sistemas externos 
+            e sobretudo, integrar nosso FrontEnd ao nosso BackEnd.
+            <br>
+            Existem muitas maneiras de realizar requisições em React, vamos iniciar pela mais básica. Requisições GET puras.
+        </p>
+
+        <h1>REQUISIÇÕES GET</h1> 
+        Uma requisição GET, tem o objetivo de solicitar a uma API externa os dados provenientes dessa API para listar suas
+        informações em ambiente interno. Para isso, vamos construir nosso exemplo.
+
+        <h2>Criando Componentes para exibição de requisições.
+            <br>
+            Consulte o arquivo requisicoes.tsx do Aplicativo exemplo.
+        </h2>
+
+        
+
+        <h1>Utilizando FETCH</h1>
+
+            <p>FETCH é um comando nativo do React para conexão com APIS externas. Iremos explanar seu uso no aplicativo exemplo.
+                <br><br>        
+                <b>No exemplo utilizaremos uma API pública que contém produtos para serem exibidos.</b>
+                <br>
+                LINK: "https://fakestoreapi.com/products/"
+            </p>        
+
+            <h1>Utilizando FETCH com TYPES separados</h1>
+            <p>É muito importante que tenhamos os Types das nossas listas criados separadamente. <br>
+            Desta maneira, é possível organizar o resultado da conexão com sua API de modo que não se perca a 
+            nome original do seu resultado.        
+            <br><br>
+            <b>IMPORTANTE</b>
+            <br>
+            O seu arquivo Type que ordenará o resultado da API deverá ter EXATAMENTE o mesmo nome dos elementos do seu Json resultado.
+            <br>
+            <br>
+            <h2>
+                <b>Criando um Type por arquivo</b> <br>
+                Consulte o arquivo <b>requisicoesTypes.tsx</b> do App exemplo.
+            </h2>    
+        </p>
+    </body>
+</html>

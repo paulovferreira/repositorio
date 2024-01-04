@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="aula6.css">
+
+    </head>
+    <body>
+
+        <!-- FORUMULARIOS -->
+        <!-- 
+            SERVEM PARA ORGANIZAR E ESTRUTURAR CADASTROS E TELAS QUE NECESSITEM
+            DE ELEMENTOS DE INPUT (ENTRADA) DE INFORMAÇÕES.
+
+            O IDEAL É QUE CADA GRUPO DE INFORMAÇÕES QUE PRECISA SER GERIDA
+            SEJA DESCRITA DENTRO DE UM FORMULÁRIO ÚNICO
+        -->
+        <h1> INFORMAÇÕES DE LOGIN </h1>
+        <form>
+
+        </form>
+
+
+        <h1> INFORMAÇÕES DE CLIENTES </h1>
+        <form>
+
+        </form>
+
+        <!-- basicamente necessitam de 2 atributos principais que ditam a forma
+        de funcionamento do nosso formulario:
+
+        1 - PARA ONDE VÃO AS INFORMAÇÕES
+            <form action="AULA_6.html">
+                Esse atributo diz para onde vão essas informações.
+                    - Isso significa que vão para a tela aula6.html contendo todas
+                    as informações inseridas dentro do meu formulario.
+
+        2 - METODO
+            <form action="AULA_6.html" method="get">
+                - basicamente pode ser GET ou POST.
+                    - GET - É uma chamada de ação direta, utilizando o proprio link.
+                        - Exemplo, youtube.
+
+                    - POST - Método de envio das informações sem a necessidade de utilização do link.
+                        - Ao salvar os registros, enviará tudo diretamente para o link de onde nosso formulario faz menção.    
+    -->
+
+    <form action="AULA_6.html" method="get">
+
+    </form>
+
+    <!-- ELEMENTOS DO FORMULARIO -->
+    <!--
+        INPUTS.
+            - SERVEM PARA INSERÇÃO DE INFORMAÇÕES.
+            - SÃO OS ELEMENTOS MAIS UTILIZADOS NOS FORMS.          
+    -->
+    <form action="AULA_6_PRATICA.html" method="post">
+        Input Text<input type="text"> 
+        <br/>
+        Input para email: <input type="email"> <!--Serve apenas para validação do e-mail-->
+        <br/>
+        Input para senhas: <input type="password"> 
+        <br/>
+        Input seleção: <input type="checkbox"> 
+        <br/>
+        Atribuição de valor padrão <input type="text" value="valor padrão"> 
+        <br/>
+        Input radio: 
+        <input type="radio" name="sexo"> 
+        <input type="radio" name="sexo"> 
+        <br/>
+        Input Submit: <input type="submit" >  <!--Esse botão envia o formulário para a action definida -->
+        <br/>
+    </form>
+    <br/><br/>
+
+    <!-- TODOS OS INPUTS DEVEM CONTER UM NAME -->
+    <!-- AO ENVIAR AS INFORMAÇÕES, O FORMULARIO SEMPRE SE COMPORTARÁ SEGUNDO O NOME DE SEUS ELEMENTOS
+        VEJA NO CASO DE UM FORMULARIO GET-->
+    <h1>PAGINA COM METODO GET</h1>
+    <form action="AULA_6_PRATICA.html" method="GET">
+        Insira o nome do usuário<input type="text" name="usuario">         
+        <br/>
+        <input type="submit" value="Enviar Get!" >  <!--Esse botão envia o formulário para a action definida -->
+    </form>
+
+    <!-- INPUTS DO HTML5 -->
+    <!-- 
+        Foram descontinuados nas versões mais antigas
+    -->
+    <h1>INPUTS NO HTML 5</h1>
+    <form action="AULA_6_PRATICA.html" method="GET">        
+        INPUT PARA COR: <input type="color" name="cor">         
+        <br/>
+        INPUT PARA DATA: <input type="date" name="data">                 
+        <br/>
+        INPUT PARA MES: <input type="month" name="datahora">  
+        <br/>
+        INPUT PARA NUMERO: <input type="number" name="mes">  
+        <br/>
+        INPUT PARA RANGE: <input type="range" name="range">  
+        <br/>
+        INPUT PARA SEARCH: <input type="search" name="search">  
+        <br/>
+        INPUT PARA HORA: <input type="time" name="time">  
+        <br/>
+        INPUT PARA URL: <input type="url" name="url">  
+        <br/>
+        INPUT PARA SEMANA: <input type="week" name="week">         
+        <input type="submit" value="Enviar Get!" >  <!--Esse botão envia o formulário para a action definida -->
+    </form>
+
+    </body>
+
+</html>
+
+<!-- PRATICA -->
+
+<!--
+   1- CRIAR PÁGINA PARA CADASTRO DE USUÁRIO CONTENDO AS SEGUINTES INFORMAÇÕES:
+    
+    NOME
+    RUA/LOGRADOURO
+    NUMERO
+    CEP
+    BAIRRO
+    CIDADE
+    ESTADO    
+    NOME DO PAI
+    NOME DA MÃE
+    CPF
+    RG    
+    TELEFONE
+    CELULAR
+    DATA DE NASCIMENTO
+    COR FAVORITA
+    SEXO
+    SCORE DO CLIENTE
+    NOME DO USUÁRIO
+    SENHA
+    URL INSTAGRAM
+    URL FACEBOOK
+    URL LINKEDIN
+
+ 2- O FORMULÁRIO DEVERÁ ESTAR APRESENTAVEM E CUSTOMIZADO VIA CSS NOS SEUS ELEMENTOS EXTERNOS AO FORMULARIO
+ 3- CRIAR UMA PÁGINA "RESULTADO.HTML" EM BRANCO, CONTENDO SOMENTE O TÍTULO "CADASTRO REALIZADO COM SUCESSO"
+ 4- ENVIAR OS DADOS PARA A PÁGINA RESULTADO.HTML VIA MÉTODO GET
+ 5- CRIAR LINK PARA ACESSO AO FORMULÁRIO NO SEU PROJETO INDEX.HTML
+-->

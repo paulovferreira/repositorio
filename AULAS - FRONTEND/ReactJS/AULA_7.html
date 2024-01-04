@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+
+    <body>
+
+        <h1>ROUTERS</h1>
+
+        <p>Para profissionalizar a navegação entre páginas no React, devemos ter claro a diferença entre PÁGINAS E COMPONENTES.</p>
+
+        <H1>Páginas</H1>
+
+        <p>São as páginas que deverão ser exibidas a cada interação do usuário com o menu.</p>
+
+        <h1>Componentes</h1>
+        <p>São os elementos que compoem as páginas. Uma página é formada de N componentes.</p>
+
+        <h1>PARA NAVEGAR ENTRE AS PÁGINAS, UTILIZAMOS O ROUTERS</h1>
+        <p>Router é uma biblioteca do React que permite criar ROTAS de navegação entre as páginas de um sistema web <br>
+            garantindo que todas as interações entre o usuário e o sistema passem pelo seu controle.
+        </p>
+
+        <h1>Instalando o Routers.</h1>
+
+        <h2>NPM INSTALL REACT-ROUTER-DOM</h2>
+        <br>
+        Após instalar a biblioteca ROUTER é necessário importá-la no arquivo principal do seu projeto para 
+        garantir que o contexto seja plenamento estabelecido em todo o projeto.
+        <br>
+        <h2>
+            <b>No seu arquivo Index.tsx</b> <br>
+            import {BrowserRouter} from 'react-router-dom';
+        </h2>
+        <p>Essa importação garantirá que todo o contexto será processado dentro do BrowserRouter</p>
+        <br>
+        <p> A partir de agora, o < APP/> será executado dentro do BrowserRouter </p>
+        <h2>
+            < BrowserRouter> <br>
+                < App /> <br>
+            < /BrowserRouter> <br>
+        </h2>
+
+        <h1>CRIANDO MULTIPLAS PÁGINAS</h1>
+        <p>Para criarmos as rotas, é necessário apontar para quais páginas o destino fará referência. </p> <br>
+
+        <h2 class="h2esquerda">
+            1 - Criar Pasta "pages" dentro do "src" do seu projeto <br>
+            2 - Criar arquivo Home.tsx e seu elemento interno Home (com Export) <br>
+            3 - Criar arquivo Sobre.tsx e seu elemento interno Sobre (com Export) <br>
+        </h2>
+
+        <h1>CRIANDO ROTAS</h1>
+        <p>A partir de agora, precisamos indicar no nosso arquivo principal (APP.TSX) quais as nossas rotas. <br>
+            Esta ação tornará o site "mapeado" para que possa ser acessado via rotas pré-definidas.            
+        </p>
+
+        <br>
+        <h2 class="h2esquerda">
+            <b>NO APP.TSX</b> <br>
+            import { Routes, Route } from 'react-router-dom'; <br>
+            import Home from './pages/Home'; <br>
+            import Sobre from './pages/About'; <br>
+            <br>
+            <b>NO RETURN DA FUNÇÃO</b> <br>
+             < Routes> <br>
+                < Route path="/" element={< Home />} /> <br>
+                < Route path="/sobre" element={< Sobre />} /> <br>
+             < /Routes> <br>
+        </h2>
+
+        <h1>PRÁTICA</h1>
+        <p>
+            1 - Criar todas as páginas do seu projeto e referenciá-las por meio das rotas.
+        </p>
+
+    </body>
+    
+    </html>

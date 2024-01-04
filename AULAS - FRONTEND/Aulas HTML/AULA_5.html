@@ -1,0 +1,232 @@
+
+ <!--A ANCORA SERVE PRA NOS ENVIAR PARA AREAS DO PROPRIO SITE-->
+    <!-- Basta atribuir um ID para os tributos da tela e a âncora direcionará para o elemento -->
+
+    <a href="#iddoelemento"> Ir para area X </a>
+
+    <!--ANCORA NO CSS-->
+    <!--
+        .link{
+            color: Blue;
+            font-size:30px
+
+        }
+        
+        .link{
+            text-decoration = none, line-through, overline, underline
+            Decoração do meu link pode ser alterado com o atributo acima.
+        }
+        -- Personalização em tempo real.
+
+        .link:hover -> { esse estado do css testa condicionalmente uma ação
+                        quando o mouse estiver sobre o elemento
+
+        }
+
+        .link:visited{ O que fazer quando o link já foi acessado.
+        }
+
+    -->
+
+
+    <!-- PRINCIPAIS TAGS DE CURSTOMIZAÇÃO DE FONTES -->
+    <!--
+            É possivel formatar um texto NO HTML e no CSS
+
+            - NEGRITO
+            B = NEGRITO, SOMENTE.
+            STRONG = NEGRITO + SEMANTICA DE IMPORTANCIA (PARA ENFASE EM TERMO DE LEITURA PARA ACESSIBILIDADE).
+
+            -ITALICO
+            I - SOMENTE COM SEMANTICA
+            EM - ITALICO COM SEMANATICA
+
+            <SMALL>
+                Inferioriza a página. Torna o texto menor, com menos enfase.
+
+             <DEL>
+                riscado
+                
+            <mark> 
+                Marcado com background
+
+            <sup> - joga levemente para cima o texto
+            <sub> - joga levemente para baixo o texto   
+
+        FORMATAÇÃO NO CSS.
+                LOREM IPSUM.
+
+            No css podemos formatar o texto
+            Atributos:
+                Color: Cor da fonte;
+                font-size: - tamanho da fonte;
+                font-weight - normal, bold;
+                font-family: - troca a familia de fontes do elemento;
+                    - Pode-se separar por virgula para caso a fonte especificada não existe.
+                    - Se não houver, ele considera o padrão do navegador;
+                text-align - alinhamento do texto; (left, right, center, justify)
+                text-decoration: decoração padrão do texto (line-trough, none, overline)
+                text-transform: muda CASESENSITIVE do texto (uppercase/lowercase)
+                letter-spacing: espaço entre letras;
+                word-spacing : espaço entre as palavras;
+                line-height: Altura da linha (espaçamento)
+                text-shadow: sombra no texto
+                    text-shadow (4 parametros: distancia da sombra a direita, 
+                    distancia da sombra abaixo, espaço ocupado pela sombra, cor)
+
+
+        IMPORTANDO FONTE EXTERNA
+            GOOGLE FONTES            
+
+                + NA fonte do Google Fontes
+                importar forntes do google garantem que todos os usuários estarão utilizando esta
+                fonte importada.
+
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap" rel="stylesheet">
+
+                font-family: 'Delicious Handrawn', cursive;
+                ------------------------------------------->
+
+
+
+    <!-- LISTAS NO HTML-->
+    <!--
+                LISTA DESORDENADA = list-stile-type = (disc, square, circle, nome) - tipo do marcador da lista
+                LISTA ORDENATA = Type (1 = numero, A = letras maiusculas, a = letras minusculas, I = Algarismos Maiusculas, i = algarismos minusculos)
+                    start - inicio da lista por valor (40, para iniciar em 40)
+
+                SUBLISTAS - ITENS DOS ITENS;
+                <ul>
+                    <li>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </li>
+                    <li></li>
+                    <li></li>
+
+                </ul>    
+    -->
+
+
+
+    <!--TABELAS EM HTML-->
+
+    <!-- 
+        INICIALMENTE UTILIZADA PARA DEFINIR O LAYOUT DE UM SITE.
+            - POSTERIORMENTE DESESTIMULADO POIS O HTML 5 JÁ NOS PERMITE CRIAR SITES RESPONSIVAMENTE.
+        
+
+        <table width="400" border=1>
+            <tr>                      -- Especificação da linha
+                <td>...</td>          -- Especificação da coluna
+                <td>...</td>
+            </tr>
+            <tr>
+                <td>...</td>
+                <td>...</td>
+            </tr>
+            <tr>
+                <td>...</td>
+                <td>...</td>
+            </tr>
+
+                POR REGRA, AS COLUNAS QUE EU COLOCAR NA PRIMEIRA LINHA, EU PRECISO COLOCAR EM TODAS AS DEMAIS.                
+            
+        </table>
+
+
+        ESPECIFICAÇÃO DO CABEÇALHO DA TABELA
+        <table width="400" border=1>
+            <tr>
+                <th>Item 1</th>
+                <th>Item 2</th>
+            </tr>            
+        </table>
+        A TAG TH, DIZ RESPEITO AO CABEÇALHO DA TABELA.
+
+
+        SEPARAÇÃO DO CABEÇALHO E CORPO DA TABELA.
+
+        <thead>
+            Sinaliza a posição do cabeçalho para efeito de visualização em paginação.            
+        </thead>    
+
+        <tbody>
+            Sinaliza o conte[udo do corpo da tabela
+        </tbody>    
+
+        Ambos servem para personalização e estilização via CSS e para paginação
+        principalmente em impressões.
+
+        ----------- ESTILIZAÇÃO DA TABELA ----------
+        Para isso é necessário retirar toda estilização do HTML.
+
+        table{
+            width:600px;
+            border: 1px solid black; -- borda somente para a tabela.
+        }
+
+        Para aplicar a borda em toda a tabela é necessário especifica-la em
+        todas as linhas e colunas da tabela.
+        td, th{
+            border: 1px solid black;
+        }
+
+        PERSONALIZAÇÃO E ESTILIZAÇÃO DO CABEÇALHO E CORPO;
+        table thead { -- THEAD DENTRO DE UMA TABELA
+            background-color: green;
+        }
+
+        table tbody { -- TBODY DENTRO DE UMA TABELA
+            background-color: green;
+        }
+        
+        PARA AUMENTAR O ESPAÇAMENTO DA TABELA
+        th,td{
+            padding: 10px;
+            text-align: center;
+        }
+
+        PARA MOSTRAR VISUALMENTE A POSIÇÃO DO REGISTRO DA TABELA;
+        tr:hover{
+            background-color: gray;
+        }
+
+        MARCAR SOMENTE OQ ESTÁ NO CORPO;
+        tbody tr:hover{
+            background-color: gray;
+        }
+
+        APLICAR LINHA INFERIOR NAS LINHAS DO BODY
+        tbody td{
+            border-bottom: 1px solid #CCC;
+        }
+
+        APLICAR LINHA SIM / LINHA NÃO.
+        tbody tr:nth-child(even) {
+            background-color: #EEE;
+        }
+
+
+        PRATICA
+        - Criar tabela com informações de veículos contendo:
+            Cabeçalho
+            5 linhas
+            5 colunas
+                - Modelo
+                - Marca
+                - Ano
+                - Cor
+                - Quantidade disponível
+        - Estilizar sua tabela para que fique visualmente agradável ao usuário.
+
+        - Linkar a página referente a sua tabela em sua página INDEX.html;
+
+
+
+
+    -->

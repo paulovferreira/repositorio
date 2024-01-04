@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+
+    <body>
+
+        <h1>FLEXBOX  - Continuação</h1>
+
+        <h1>POSICIONAMENTO DOS ITENS</h1>
+            O posicionamento dos itens dependerá de algumas condições: <br>
+            1) Qual a largura dos itens internos da minha DIV Conteiner; <br>
+            2) Qual a FLEX-DIRECTION do meu Conteiner <br>
+            <b>Observação.</b>
+                Se utilizado o dimencionamento pelo atributo FLEX, o css não conseguirá posicionar os itens desse maneira.
+
+            <h1> JUSTIFY-CONTENT </h1>
+            <P>Alinha os itens de acordo com o Direction escolhido <br>
+                Se for Linha, organiza os itens internos da DIV na linha (horizontalmente). <br>                
+                e for Coluna, organiza os itens internos da DIV na Coluna (Verficalmente.) <br> 
+                Possibilidades: Center, flex-start, Flex-end, Left, Right, <br>
+                 Space Arround (espaçamento igual) <br>
+                 Space-Between (Espaço igual exceto o primeiro e o ultimo);
+                <br>                
+            </P>            
+
+            <h1> ALIGN-ITEMS </h1>
+            <P>Alinha os itens no sentido oposto do JUSTIFY-CONTENT. </P> <br>
+
+            <h1> ALINHAMENTO DE ITENS INDIVIDUALMENTE </h1>
+            <p>Para alinhar itens dentro de uma DIV de maneira individual, basta utilizar a propriedade: <br>
+            <b>ALIGN-SELF: [Meu Alinhamento]</b> </p> <br>
+
+            <h1> DETERMINAÇÃO DA ORDEM DE EXIBIÇÃO. </h1>
+            <p> A propriedade <b>ORDER: </b> dita a ordem que os itens serão exibidos. <br>
+                Se não houver especificação, o valor atribuido será 0, tornando-o prioridade.
+            </p>
+
+            <h1>FLEX WRAP</h1>
+            <p> Determina como será feita a quebra de linha entre os componentes a medida que eles 
+                extrapolam o WIDHT máximo da tela <br>                
+                OBS. Só funcionam caso o tamanho dos itens esteja determinado de maneira FIXA. <br>
+
+                <h2>
+                    flex-wrap : wrap;
+                </h2>
+
+                Ao utilizar o flex-wrap, podemos especificar o alinhamento dos itens de acordo com <br>
+                o contexto onde ele está inserido. <br>
+                OBS. Só funciona para alinhamento de conteúdo, quando houver quebra de linha por meio do wrap.
+
+                <h2>align-content: [alinhamento]</h2>
+            </p>
+
+            <h1> PRÁTICA </h1>
+            1 - Criar o COMPONENTE CABEÇALHO utilizando a res   posividade por meio do Flex.
+            2 - Utilizar somente o componente cabeçalho no projeto.            
+    </body>
+</html>

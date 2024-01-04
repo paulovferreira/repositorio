@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+
+    <body>        
+        <h1>ROUTES - GRUPOS DE ROTAS.</h1>
+        <p>Podemos criar grupos de rotas aninhadas sobre o mes prefixo do seu sistema.</p><br>
+        <h2>
+            Página Home = "/" <br>
+            Página Sobre = "/Sobre" <br>
+            Página Sobre - Paulo = "/Sobre/Paulo" <br>
+            Página Sobre - Alunos = "/Sobre/Alunos" <br>         
+        </h2>
+
+        <p>Perceba que a medida que vamos precisando aninhar as páginas, podemos criar "sublibnks" para cada uma delas</p> <br>
+        <b>IMPORTANTE</b> <br>
+        <p>Para cada nova rota em uma nova página, precisamos do IMPORT específico da página de referência.</p>
+
+        <h1>Criando Rota para 404 - Tratamento de Erro</h1>
+        <p>Caso o usuário informe uma página inexistente, seja via link ou seja via aplicação externa, precisamos estar
+            preparados para tratar essa excessão.
+        </p> <br>
+        <b>PARA ISSO, É NECESSÁRIO CRIAR UMA PÁGINA CHAMADA "NOTFOUND.TSX"</b> <br>
+        <p>Essa será a página a ser exibida quando um link inexistente for informado em seu projeto.</p>
+
+        <h1>CRIANDO A ROTA NOTFOUND</h1>
+        <p>A rota para as páginas não encontradas, será uma rota generica. Dessa forma, criamos um "coringa" para caso 
+            nenhuma das rotas sejam encontradas, esse meu elemento (NOTFOUND) seja exibido </p>
+
+        <h2>
+            < Route path="*" element={< NotFound />} /> <br>
+            Obs. Lembrando que para isso, precisaremos do import do componente NOTFOUND.            
+        </h2>
+
+
+        <h1>LINKS</h1>
+        <p>Essa é a caracteristica PRINCIPAL da biblioteca Router. <br>
+            <b> EXIBIR ELEMENTOS SEM RECARREGAR A TELA. </b> <br><br>
+
+            A Partir dos LINKS o sistema processará todo o HTML já armazenado para exibir na tela sem a necessidade de reprocessamento total.
+            </p>
+
+            <h1>Utilizando Links</h1>
+            <p>
+                Os links utilizando ROUTERS server para efetivamente criar a interação entre as rotas já criadas. <br>
+                Para conseguir vizualizar melhor, vamos garantir a seguinte estrutura: <br>                
+            </p> 
+
+            <h2 class="h2esquerda" > 
+                1) Criar o componente Cabecalho. <br>
+                2) Criar o componenet MENU. <br>
+                3) Incluir o componente Menu dentro do componente Cabecalho. <br>
+                4) Icluir o componente cabeçalho dentro da sua página HOME. <br>
+            </h2>
+
+            <p>Agora, vamos criar o links para a página utilizando os menus criados.</p>
+            <br>
+            <h2>
+                <b>Importando o elememento LINK</b><br>
+                import {Link} from 'react-router-dom';
+            </h2>
+            <br>
+            Essa importação garantirá que possamos utilizar os Links do Router.
+            <br>
+            <h2>
+                <b> Utilizando o Link </b>
+       
+                    < ul> <br>
+                        < li> < Link to="/sobrealuno"> Sobre Paulo < /Link> < /li> <br>
+                        < li> < Link to="/sobreprofessor"> Sobre Alunos < /Link> < /li> <br>
+                        < li> < Link to="/sobredirecao"> Sobre Alunos < /Link> < /li> <br>
+                    < /ul> <br>
+            </h2>
+
+            <h1>Diferença entre Link e Ancoras.</h1>
+            <p>
+                <h2>Ancoras <br>
+                    < a href="/sobrepaulo"> Sobre paulo </a>
+
+                </h2>                
+                    Trabalham com o recarregamento total de todas as páginas do projeto. <br>
+                    Ao utilizar a âncora, ele ignora totalmente as funcionalidades do REACT. <br>
+
+                <h2>Link <br>
+                    < Link to="/sobrepaulo"> Sobre Paulo < /Link> <
+                </h2>
+                   Trabalha 100% com carregamento Nativo, carregando apenas os elementos necessários a cada atualização de página.
+                </p>
+
+            <h1>Prática</h1>
+            <p>
+                1) Construir o link para as páginas do seu projeto. <br>
+                2) Conectá-los a sua página Home e aplicá-los no seu menu. <br>
+            </p>
+
+            
+
+
+
+
+
+
+
+            
+            
+            
+        
+    </body>
+    
+</html>

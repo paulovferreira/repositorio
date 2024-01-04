@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+
+    <body>  
+        <h1>RENDERIZAÇÃO DE LISTAS</h1>
+        <p>
+            Por diversas vezes, será necessário renderizar listas para exibição dinâmica na tela. <br>
+            As listas podem ser criadas dinamicamente ou vir atravez de uma fonte de dados, porém, independente de sua origem,
+            a exibição se dará de maneira automática.
+        </p>
+
+        <h2 class="h2esquerda">
+            <b>Criando uma lista.</b> <br>
+            <br>
+            let list = [ <br>
+            'Nome 1', <br>
+            'Nome 2', <br> 
+            'Nome 3', <br>
+            'Nome 4' <br>
+            ]   <br> <br>
+
+            <b>Com a lista criada, precisamos RENDERIZÁ-LA</b> <br>
+            < h2>Lista de Nomes< /h2> <br>
+            < ul> <br>
+                {list.map((item)=>( <br>
+                    < li>{item}< /li> <br>
+                ))} <br>
+            < /ul> <br>
+        </h2>
+
+        <p>
+            Isso fará com que todos os itens da minha lista sejam exibidos de maneira dinamica num LOOP.
+        </p>
+
+        <h1>RENDERIZAÇÃO ÚNICA DE LISTAS</h1>
+        <p>
+           Se olharmos no "Inspecionar Elementos" do navegador, em Console, vamos ver que mesmo que a lista seja exibida,
+           o navegador exibe um alerta. <br>
+           Neste alerta, é informado que o item da minha lista não possui uma CHAVE ou KEY, oque torna meu item "anonimo", 
+           sem identificação. <br>
+           Isso se tornará um problema no momento em que precisarmos identificar qual item de uma lista estamos utilizando em uma operação, por exemplo.
+        </p>
+
+        <h2 class="h2esquerda">
+            <b>Criando uma chave única para o item.</b> <br>
+            < ul> <br>
+            {list.map((item)=>( <br>
+                < li key="1" >{item}< /li> <br>
+            ))} <br>
+            < /ul> <br> <br>
+
+            Perceba que a mensagem exige que seja informado uma Key, porém, se informarmos um valor fixo, esse valor será 
+            replicado para todos os itens da lista, logo, o problema não é resolvido. <br>
+
+            <b>Para isso, precisamos utilizar o parâmetro INDEX, presente no MAP.</b> <br> <br>
+            < ul> <br>
+            {list.map((item, index)=>( <br>
+                < li key={index} >{item}< /li> <br>
+            ))} <br>
+            < /ul> <br>
+            Dessa meneira, o item passa a ter uma chave única.
+        </h2>
+
+        <h1>RENDERIZANDO LISTAS DE OBJETOS</h1>
+
+        <p>O processo de renderização de uma lista de objetos se dá da mesma forma. A única diferença é que 
+            em nossa criação, criaremos a lista especificando todos os valores do objeto.
+        </p>
+
+        <h2 class="h2esquerda">
+            let list = [ <br>
+            {name: 'Nome 1', age: '30' }, <br>
+            {name: 'Nome 2', age: '35' }, <br>
+            {name: 'Nome 3', age: '40' }, <br>
+            {name: 'Nome 4', age: '45' }, <br>
+            {name: 'Nome 5', age: '60' }, <br>        
+            ]    <br> <br>
+
+            Para utilizar esse objeto que está vindo por meio do meu loop, basta acessar as propriedades do item que criamos
+            em sua declaração <br>
+
+            < ul> <br>
+            {list.map((item)=>( <br>
+                < li key="1" > Nome: {item.name} - {item.age} Anos< /li> <br>
+            ))} <br>
+            < /ul> <br> <br>
+        </h2>
+        <br> 
+
+        <h1>Renderizando Listas de componentes</h1>
+        <p>
+            Nem sempre a origem da lista estará no mesmo local onde ela será exibida. Nestes casos, tornamos os itens da 
+            lista COMPONENTIZADOS, para exibição.
+        </p>
+
+        <h2 class="h2esquerda"> 
+            <b>Criando o componente ItemLista</b> <br>
+
+            type Props =  { <br>
+                dados: { <br>
+                    name: string; <br>
+                    age: string; <br>
+                } <br>
+            } <br>
+            
+            function ItemLista ({dados}: Props) { <br>
+                return( <br>
+                    < li>Nome: {dados.name} - Idade: {dados.age}< /li> <br>
+                ) <br>
+            } <br>
+            
+            export default ItemLista; <br>
+        </h2>
+
+        Uma vez criado, utilizaremos a PROP do componente para passar o objeto a ser exibido.
+
+        <br>
+
+        <h2 class="h2esquerda"> 
+            <b>Criando a lista por meio de componentes </b> <br>
+            É preciso importar o componente ItemLista <br> <br>
+
+
+            < ul>
+                {listObj.map((item, index)=>(
+                    < ItemLista key={index} dados={item} />             
+                ))}
+            < /ul>
+
+        </h2>
+
+
+        
+        
+        
+
+        
+
+
+
+
+
+
+    </body>
+
+</html>

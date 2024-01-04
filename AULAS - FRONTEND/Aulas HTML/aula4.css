@@ -1,0 +1,26 @@
+*{
+   box-sizing: content-box;
+}
+body{
+    margin: 0
+}
+#primeira{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+}
+#segunda{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    border: 15px SOLID brown;    
+    padding: 20px;
+
+}
+img{
+    width: inherit;
+    max-width: 350px;    
+}
+h1{
+    text-align: center;
+}

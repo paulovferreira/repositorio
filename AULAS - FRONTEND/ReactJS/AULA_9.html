@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+
+    <body>
+
+        <h1>PROPS EM JSX </h1>
+        <p>
+            Muitas vezes é necessário utilizar valores variáveis de ma tela para outra, 
+            como por exemplo, a mudança do texto do meu cabeçalho a depender do local de onde ele é
+            chamado.
+            <br>
+            <b> Para isso, existem as PROPs.</b> <br>
+            Num comparativo simplorio com o HTML:
+
+            <h2 class="h2esquerda">
+                <b>Em HTML</b><br>
+                < a href="" > Clique aqui < /a> <br>
+                Onde: <br>
+                A = Elemento <br>
+                href = Atributo <br> <br>
+                <b>EM JSX</b> <br>
+                < Cabecalho titulo="Minha Página Principal" /> <br>
+                Onde: <br>
+                Cabecalho = Componente <br>
+                titulo = PROP <br>            
+            </h2>
+
+            <h1>PREPARANDO O COMPONENTE PARA RECEBER UMA PROP</h1>
+            <p>
+                Para que possamos utilizar valores variáveis em componentes, precisamos prepará-lo para receber a variável. <br>
+
+                <h2 class="h2esquerda"> 
+                    type Props = { <br>
+                        titulo: String; <br>
+                    } <br>
+                    function cabecalho(props: Props ){ <br>
+                        return( <br>
+                            < div className='cabecalho'> Cabecalho da página</div>  <br>                      
+                            )<br>
+                    } <br>                   
+                    export default cabecalho<br>
+                </h2>
+
+                <p>
+                    Após declarar a PROP e torná-la disponível para utilização, podemos manipulá-la dentro da minha página.
+                </p>
+                <h2>
+                    Essa é a propriedade que recebi de quem me chamou: {props.titulo}
+                </h2>
+
+                <h1>Desobrigando o uso de uma prop criada</h1>
+                <p>
+                    Ao criar uma PROP, percebemos que ela automaticamente passa a ser obrigatória. <br>
+                    Para desobrigar a utilização da prop, basta declará-la em seu TYPE com o caracter <b>"?"</b> após o seu nome, assim:
+                    <h2>
+                        type Props = { <br>
+                            titulo?: String; <br>
+                         } <br>
+                    </h2>
+                </p>
+
+                <b>Após declarar seu componente para receber a PROP será necessário informar no momento 
+                    da invocação do Componente.
+                    <br>
+                    <b>Para isso, fazemos assim: </b>
+                </b>
+            </p>
+            <h2> 
+                < Cabecalho titulo="Este é o meu título" />
+            </h2>
+        </p>
+
+        <h1>PRÁTICA</h1>
+
+        Criar uma PROP em um de seus componentes, para exibir uma informação importante para a página seguinte.
+        <br>
+    </body>
+</html>
