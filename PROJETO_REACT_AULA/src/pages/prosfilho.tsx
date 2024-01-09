@@ -10,10 +10,16 @@ type Props = {
 
 
 function Filho(Parametro: Props) { 
+   
 
     function handleClickButton() {
         // alert("Clicou no botão do filho.");
         Parametro.onClickFN("Texto enviado do FIlho para o pai")        
+    }
+
+    function handleClickButtonPai() {
+        // alert("Clicou no botão do filho.");
+        Parametro.onClickFN(`Conteúdo A retornar: ${Parametro.texto}`)        
     }
 
     return(
@@ -25,6 +31,9 @@ function Filho(Parametro: Props) {
             O valor do meu parâmetro texto = {Parametro.texto}
             <br /> <br />
             <button onClick={handleClickButton}> Exibir valor  </button>
+            <br />
+            <br />
+            <button onClick={handleClickButtonPai}> Retornar valor informado no pai </button>
 
            
         </div>

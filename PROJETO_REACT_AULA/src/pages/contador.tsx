@@ -6,7 +6,7 @@ import {useState} from 'react';
 
 
 function Contador() {
-
+ 
     const [numero, setNumero] = useState(1);
     const [nome, setNome] = useState(0);
 
@@ -15,6 +15,7 @@ function Contador() {
     function handleButtonClick () {
         setNumero(10);
         }
+        
 
         function handleButtonClickMais () {
             setNumero(numero+1);

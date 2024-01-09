@@ -44,7 +44,7 @@ function RequisicoesFilmes () {
         //Testes de validação se os dados estão preenchidos.
         if (addNomeText && addIdadeText) {
             
-            let response = await fetch('http://localhost:3001/usuarios', 
+            let response = await fetch('https://localhost:3001/usuarios', 
                                         {
                                             // Por padrão, o method do fetch, é o GET, por isso não precisamos especificar.
                                             method: 'POST',
@@ -82,7 +82,7 @@ function RequisicoesFilmes () {
 
 
         } else {
-            alert('Preencha as informações.');
+            alert('Preencha as informações. ');
         }
 
     }
