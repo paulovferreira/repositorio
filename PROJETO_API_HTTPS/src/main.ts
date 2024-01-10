@@ -11,7 +11,8 @@ async function bootstrap() {
   };
 
   
-  const app = await NestFactory.create(AppModule,{httpsOptions});
+  // const app = await NestFactory.create(AppModule,{httpsOptions});
+  const app = await NestFactory.create(AppModule);
   
   app.useGlobalPipes(
     new ValidationPipe({
@@ -24,6 +25,6 @@ async function bootstrap() {
   
   useContainer(app.select(AppModule),{fallbackOnErrors:true})
   app.enableCors();
-  await app.listen(3001);
+  await app.listen(3010);
 }
 bootstrap();

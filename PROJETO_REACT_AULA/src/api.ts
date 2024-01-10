@@ -1,6 +1,14 @@
+import { isForStatement } from "typescript";
+
 export const api = {
+    CarregarUsuarioUnico: async(param: string) => {
+        let response = await fetch('https://jsonplaceholder.typicode.com/todos/' + param);            
+        let json = await response.json(); 
+        return json;
+    },
+
     CarregarTodosUsuarios: async () => {
-        let response = await fetch('https://jsonplaceholder.typicode.com/todos/1');    
+        let response = await fetch('https://jsonplaceholder.typicode.com/todos/');    
         let json = await response.json(); 
         return json;
     },
@@ -10,7 +18,7 @@ export const api = {
             method: 'POST',
             body: JSON.stringify
             ({         
-                title, body, userID: 1}),
+                title, body, userID: 1}),                
             headers: {              
                 'Content-Type': 'application/json'
                 }                                        
@@ -20,7 +28,32 @@ export const api = {
 
         console.log(json);
         return json;
+    },
+    Logar: async(username:string, password:String) => {
+        {             
+            
+            let response = await fetch('http://localhost:3010/usuarios/login', 
+            {              
+                method: 'POST',
+                body: JSON.stringify
+                ({         
+                   email:username, senha:password }),                   
+                headers: {              
+                    'Content-Type': 'application/json; charset=utf-8'
+                    }                 
+                
+             }   
+             );    
+            let json = await response.json();        
+    
+            console.log(json);
+            return json;
+        }
     }
+
+
+
+
 
 
 }

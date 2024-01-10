@@ -12,6 +12,11 @@ import { LoginUsuarioDTO } from "./dto/loginUsuario.dto";
 export class UsuarioController{    
     constructor(private clsUsuariosArmazenados: UsuariosArmazenados){
         
+        var usuario = new UsuarioEntity(uuid(),'Aluno',17,'Bauru',
+        'teste@teste.com', '14999999999', '123456')
+
+        this.clsUsuariosArmazenados.AdicionarUsuario(usuario);                
+        
     }
     @Get()
     async RetornoUsuarios(){
@@ -30,12 +35,14 @@ export class UsuarioController{
         return listaRetorno;
     }
 
-    @Get('/login')
-    async Login(@Body() dadosUsuario: LoginUsuarioDTO){
+    @Post('/login')
+    async Login(@Body() dadosUsuario: LoginUsuarioDTO){       
+
         var login = this.clsUsuariosArmazenados.validarLogin(dadosUsuario.email,dadosUsuario.senha);
         return {
-            status: login,
-            message: login ? "Login efetuado" : "Usuario ou senha inválidos"
+            usuario: login[0],
+            status: login[1],
+            message: login[1] ? "Login efetuado" : "Usuario ou senha inválidos"
         }
     }
 
