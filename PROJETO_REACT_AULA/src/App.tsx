@@ -21,10 +21,12 @@ import Requisicoes from './pages/requisicoes';
 import RequisicoesTypes from './pages/requisicoesTypes';
 import RequisicoesTypesAsync from './pages/requisicoesTypesAsync';
 import RequisicoesPost from './pages/requisicoesPost';
+import RequisicoesParam from './pages/requisicoesParam';
 import RequisicoesPostRefact from './pages/requisicoesPostRefact';
 import RequisicoesFilmes from './pages/requisicoesFilmes';
 import PaiFilho from './pages/prospaifilho';
-
+import { UsuarioLogadoProvider } from './contexts/contextAuth';
+import Condicional from './pages/Condicional';
 
 
 function App(){
@@ -32,29 +34,30 @@ function App(){
     <div>          
       <hr />
       <div>
-        <Routes>          
-          <Route path="/" element={<Login />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/sobre" element={<Sobre />} />
-          <Route path="/sobrealuno" element={<SobreAluno />} />
-          <Route path="/sobredirecao" element={<SobreDirecao />} />
-          <Route path="/sobreprofessor" element={<SobreProfessor />} />
-          <Route path="/sobrealuno/:parametro" element={<SobreItemAluno/> } />
-          <Route path="/lista" element={<Lista/> } />
-          <Route path="/strap" element={<Strap/> } />
-          <Route path="/requisicoes" element={<Requisicoes/> } />
-          <Route path="/requisicoestype" element={<RequisicoesTypes/> } />
-          <Route path="/requisicoesTypesAsync" element={<RequisicoesTypesAsync/> } />
-          <Route path="/requisicoesPost" element={<RequisicoesPost/> } />
-          <Route path="/requisicoesRefact" element={<RequisicoesPostRefact/> } />
-          <Route path="/requisicoesFilmes" element={<RequisicoesFilmes/> } />
-          <Route path="/paifilho" element={<PaiFilho/> } />
+        <UsuarioLogadoProvider>
+          <Routes>          
+            <Route path="/" element={<Login />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/sobre" element={<Sobre />} />
+            <Route path="/sobrealuno" element={<SobreAluno />} />
+            <Route path="/sobredirecao" element={<SobreDirecao />} />
+            <Route path="/sobreprofessor" element={<SobreProfessor />} />
+            <Route path="/sobrealuno/:parametro" element={<SobreItemAluno/> } />
+            <Route path="/lista" element={<Lista/> } />
+            <Route path="/strap" element={<Strap/> } />
+            <Route path="/requisicoes" element={<Requisicoes/> } />
+            <Route path="/requisicoestype" element={<RequisicoesTypes/> } />
+            <Route path="/requisicoesTypesAsync" element={<RequisicoesTypesAsync/> } />
+            <Route path="/requisicoesPost" element={<RequisicoesPost/> } />
+            <Route path="/requisicoesParam" element={<RequisicoesParam/> } />
+            <Route path="/requisicoesRefact" element={<RequisicoesPostRefact/> } />
+            <Route path="/requisicoesFilmes" element={<RequisicoesFilmes/> } />
+            <Route path="/paifilho" element={<PaiFilho/> } />
+            <Route path="/condicional" element={<Condicional/> } />
 
 
-          
-
-            
-        </Routes>
+          </Routes>
+        </UsuarioLogadoProvider>  
       </div>
       <hr />
     <footer>

@@ -27,6 +27,14 @@ function Login () {
 
     const UsuarioLogadoCtx = useContext(UsuarioLogadoContext);
 
+    const AcessoDireto = () => {                
+        UsuarioLogadoCtx?.setName(fUser);        
+        alert(fUser)
+        alert(UsuarioLogadoCtx?.name)
+        
+        
+        navigate('/home');
+    }
      
     const RealizarLogin = async () => {
         {
@@ -56,6 +64,11 @@ function Login () {
             <input onChange={handlefSenhaChange}/>
             <br />
             <button onClick={RealizarLogin}> Logar </button>
+            <br />
+            <br />
+            <br />
+            <br />
+            <button onClick={AcessoDireto}> Logar </button>
         </div>
      
     </div>
