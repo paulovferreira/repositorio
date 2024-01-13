@@ -17,7 +17,7 @@ function RequisicoesTypes () {
     } , []);
 
     const carregarProdutos = () => {
-            fetch("https://fakestoreapi.com/products/1")       
+            fetch("https://fakestoreapi.com/products")       
             .then((response) => {
                 return response.json();
         })        
