@@ -20,7 +20,7 @@ function RequisicoesTypesAsync () {
 
     const carregarProdutos = async () => {        
         setLoading(true);
-
+        try { 
         // Declara a var response separadamente para que possa aguardar o resultado de sua consulta
         let response = await fetch("https://fakestoreapi.com/products/1");
         // Declara a var json separadamente para que possa aguardar o json da requisição anterior ser preenchido
@@ -30,6 +30,11 @@ function RequisicoesTypesAsync () {
         const dataArray = Array.isArray(json) ? json: [json]
         setLoading(false);
         setProdutos(dataArray);
+        } catch (e) {
+            setLoading(false);
+            alert('Falha ao carregar os produtos. Tente novamente mais tarde.')
+            console.error(e);
+        }
 
     
     }   
