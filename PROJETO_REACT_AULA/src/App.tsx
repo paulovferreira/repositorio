@@ -27,6 +27,8 @@ import RequisicoesFilmes from './pages/requisicoesFilmes';
 import PaiFilho from './pages/prospaifilho';
 import { UsuarioLogadoProvider } from './contexts/contextAuth';
 import Condicional from './pages/Condicional';
+import Effects from './pages/effects';
+import RequisicoesPostArquivo from './pages/requisicoesPostArquivo';
 
 
 function App(){
@@ -54,8 +56,8 @@ function App(){
             <Route path="/requisicoesFilmes" element={<RequisicoesFilmes/> } />
             <Route path="/paifilho" element={<PaiFilho/> } />
             <Route path="/condicional" element={<Condicional/> } />
-
-
+            <Route path="/effect" element={<Effects/> } />
+            <Route path="/arquivos" element={<RequisicoesPostArquivo/> } />
           </Routes>
         </UsuarioLogadoProvider>  
       </div>
