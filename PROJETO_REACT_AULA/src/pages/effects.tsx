@@ -18,10 +18,14 @@ function Effects() {
             // Essa tag vazia monitora QUANDO será executado o effect. Para monitorar uma const, basta colocar [age] [name] etc...
      )
 
-     useEffect( () => { 
+    /* USANDO EFFECT PARA CONCATENAR VARIÁVEIS
+    
+    useEffect( () => { 
         setNomecompleto(nome+' '+sobrenome)
         console.log(nomecompleto)    },
-     [nome, sobrenome] );
+     [nome, sobrenome] 
+     
+     );*/
 
 
      // Podemos ainda utilizar o useEffect para concatenar constantes existentes.
