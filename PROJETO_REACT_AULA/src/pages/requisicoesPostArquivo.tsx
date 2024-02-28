@@ -48,7 +48,6 @@ function RequisicoesPostArquivo () {
         setLoading(false);
         setUsuarios(dataArray);    
     }   
-
     
     const handleAddPost = async () => {
             // ANTES DE ENVIAR A IMAGEM PRECISO VALIDAR SE ESSE INPUT CONTEM UMA IMAGEM ACEITA PELA MINHA API
@@ -71,17 +70,28 @@ function RequisicoesPostArquivo () {
                 
                 Posso então criar uma lista dos mimetypes aceitos:
                 */ 
-               const tiposPermitidos = ['image/pgn', 'image/jpg', 'image/gif', 'image/jpeg']
+               const tiposPermitidos = ['image/png', 'image/jpg', 'image/gif', 'image/jpeg']
 
                // após criar a lista, valido se o meu tipo está incluso na lista que eu criei.
 
                if(tiposPermitidos.includes(fileItem.type)){
 
+                // é preciso criar um FORM DATA, um tipo de arquivo especial para encapsular o json
+                const data = new FormData();
+                data.append('image', fileItem);
+                data.append('legenda', legenda);
+
+                // TUDO CERTO, VOU ENVIAR O ARQUIVO.
+                    let json = await api.AdicionarcomArquivo(data);
+                    if (json.id) {
+                    alert('Post Adicionado com sucesso!')     
+                    setUsuarios((usuarios) => [...usuarios, json] );
+                    } else {
+                        alert('Falha ao adicionar usuário')
+                    }       
                }else{
                 alert('Arquivo incompatível')
                }
-
-
             }else{
                 alert('Selecione um arquivo')
             }

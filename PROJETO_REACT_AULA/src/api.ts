@@ -12,6 +12,7 @@ export const api = {
         let json = await response.json(); 
         return json;
     },
+    
     AdicionarUsuarios: async (title: string, body: string, userId: number) => {
         let response = await fetch('https://jsonplaceholder.typicode.com/posts', 
         {        
@@ -29,6 +30,20 @@ export const api = {
         console.log(json);
         return json;
     },
+
+    AdicionarcomArquivo: async (formData: FormData) => {
+        let response = await fetch('https://jsonplaceholder.typicode.com/posts', // url de exemplo, não permite inserção de informações.
+        {        
+            method: 'POST',
+            body: formData                                       
+         }   
+         );    
+        let json = await response.json();        
+
+        console.log(json);
+        return json;
+    },
+
     Logar: async(username:string, password:String) => {
         {             
             
