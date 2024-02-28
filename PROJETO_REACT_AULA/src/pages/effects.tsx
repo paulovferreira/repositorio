@@ -7,29 +7,38 @@ import '../estilo/estilo.css';
 function Effects() { 
 
     const [nome, setnome] = useState('Paulo');
+    const [sobrenome, setSobrenome] = useState('Ferreira')
+    
     const [age, setAge] = useState(90)
 
-    const [sobrenome, setSobrenome] = useState('Ferreira')
+    
     const [nomecompleto, setNomecompleto] = useState('')
 
-    useEffect( ()=> {
+    /*useEffect( ()=> {
         console.log('RODOU O EFFECT ... ')}, // primeiro parametro do effect é o que ele deve rodar.
-        []  // Segundo parâmetro é quando deve rodar. // o Array vazio não permite executar mais de uma vez.
+        [nome, age]  // Segundo parâmetro é quando deve rodar. // o Array vazio não permite executar mais de uma vez.
             // Essa tag vazia monitora QUANDO será executado o effect. Para monitorar uma const, basta colocar [age] [name] etc...
-     )
+     )*/
 
-     useEffect( () => { 
-        setNomecompleto(nome+' '+sobrenome)
-        console.log(nomecompleto)    },
+
+
+     useEffect( 
+        () => { 
+            setNomecompleto(nome+' '+sobrenome)
+            console.log(nomecompleto)    },
      [nome, sobrenome] );
 
 
      // Podemos ainda utilizar o useEffect para concatenar constantes existentes.
      // Veja o exemplo de Nome e Sobrenome
+
   
     return(
         <div>   
             Meu nome é: {nome} e eu tenho {age} Anos
+            <br /><br />
+            Nome completo: {nomecompleto}
+            
 
             <br />
 

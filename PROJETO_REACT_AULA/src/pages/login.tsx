@@ -44,6 +44,7 @@ function Login () {
             if (json.status) {
                 alert('Bem vindo, ' + fUser);
                 UsuarioLogadoCtx?.setName(json.usuario);
+                UsuarioLogadoCtx?.setAge(json.idade);
                 navigate('/home');
             } else {
                 setmsgApi(json.message);
