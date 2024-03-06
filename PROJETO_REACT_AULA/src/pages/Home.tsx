@@ -24,7 +24,7 @@ function Home () {
                 <p>Usuário Logado: {UsuarioLogadoCtx?.name} </p>    
             </UsuarioLogadoProvider>
         
-        <h1>ESSA É A PÁGINA HOME!</h1>
+        <h1>HOME</h1>
        </>
        }
     </div>

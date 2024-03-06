@@ -29,6 +29,7 @@ import { UsuarioLogadoProvider } from './contexts/contextAuth';
 import Condicional from './pages/Condicional';
 import Effects from './pages/effects';
 import RequisicoesPostArquivo from './pages/requisicoesPostArquivo';
+import NotFound from './pages/NotFound';
 
 
 function App(){
@@ -38,6 +39,7 @@ function App(){
       <div>
         <UsuarioLogadoProvider>
           <Routes>          
+            <Route path="*" element={<NotFound/>} />
             <Route path="/" element={<Login />} />
             <Route path="/home" element={<Home />} />
             <Route path="/sobre" element={<Sobre />} />

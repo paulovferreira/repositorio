@@ -33,16 +33,16 @@ function Lista () {
         <br />
         
 
-        <h2>Lista de Nomes</h2>
+        <h2 className="listaNomes">Lista de Nomes</h2>
         <ul>
             {list.map((item)=>(
-                <li>{item}</li>
+                <li className="itemNome">{item}</li>
             ))}
         </ul>
 
         <br />
 
-        <h2>Lista de Objetos</h2>
+        <h2 className="ListaObj">Lista de Objetos</h2>
 
         <ul>
             {listObj.map((item, index)=>(
