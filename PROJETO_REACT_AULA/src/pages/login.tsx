@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { ChangeEvent, useContext, useState } from "react";
+import { ChangeEvent, useContext, useEffect, useState } from "react";
 import { api } from "../api";
 import { UsuarioLogadoContext } from "../contexts/contextAuth";
 import '../estilo/estilo.css'
@@ -12,6 +12,15 @@ import '../estilo/estilo.css'
 */
 
 function Login () {
+
+    const UsuarioLogadoCtx = useContext(UsuarioLogadoContext);
+
+    useEffect( () => {
+       const name = localStorage.getItem('ContextName');
+       if (name !== ''){
+           UsuarioLogadoCtx?.setName(fUser); 
+       }
+    })
 
     const [fUser, setfUser] = useState('');
     const [fSenha, setfSenha] = useState('');
@@ -28,10 +37,10 @@ function Login () {
         setfSenha(e.target.value)
     }
 
-    const UsuarioLogadoCtx = useContext(UsuarioLogadoContext);
+    
 
     const AcessoDireto = () => {                
-        UsuarioLogadoCtx?.setName(fUser);      
+        UsuarioLogadoCtx?.setName(fUser);         
         navigate('/home');
     }
      
@@ -44,6 +53,7 @@ function Login () {
             if (json.status) {
                 alert('Bem vindo, ' + fUser);
                 UsuarioLogadoCtx?.setName(json.usuario);
+                
                 navigate('/home');
             } else {
                 setmsgApi(json.message);

@@ -6,6 +6,8 @@ import { UsuarioLogadoContext, UsuarioLogadoProvider } from "../contexts/context
 function Home () {
     const UsuarioLogadoCtx = useContext(UsuarioLogadoContext);
 
+    
+
     return (
     <div>
         {  ( !UsuarioLogadoCtx?.name || UsuarioLogadoCtx?.name === null) &&
