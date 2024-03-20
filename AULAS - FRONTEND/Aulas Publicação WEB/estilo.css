@@ -1,0 +1,53 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
+}
+h1{
+    border: 1px solid rgb(195, 195, 195);
+    background-color: rgb(138, 138, 138);
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+}
+
+.h2esquerda{   
+    border: 1px solid rgb(231, 231, 231);
+    background-color: black;
+    border-radius: 10px;
+    text-align: left;
+    margin-right: 20%;
+    margin-left: 20%;
+    color: white;
+    padding: 10px;
+    font-weight: normal;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+h2{   
+    border: 1px solid rgb(231, 231, 231);
+    background-color: black;
+    border-radius: 10px;
+    text-align: center;
+    margin-right: 10%;
+    margin-left: 10%;
+    color: white;
+    padding: 10px;
+    font-weight: normal;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+table {
+    color: #caa;    
+    text-align: center;
+  }
+  
+  tr {
+    height: 50px;
+  }
+  
+  td {
+    width: 150px;
+    border:1px solid black;
+  }
+  
