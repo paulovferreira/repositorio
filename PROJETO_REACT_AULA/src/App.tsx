@@ -30,6 +30,7 @@ import Condicional from './pages/Condicional';
 import Effects from './pages/effects';
 import RequisicoesPostArquivo from './pages/requisicoesPostArquivo';
 import NotFound from './pages/NotFound';
+import Flex from './components/flex';
 
 
 function App(){
@@ -60,6 +61,7 @@ function App(){
             <Route path="/condicional" element={<Condicional/> } />
             <Route path="/effect" element={<Effects/> } />
             <Route path="/arquivos" element={<RequisicoesPostArquivo/> } />
+            <Route path="/flex" element={<Flex/> } />
           </Routes>
         </UsuarioLogadoProvider>  
       </div>
