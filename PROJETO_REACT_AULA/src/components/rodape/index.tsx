@@ -3,8 +3,8 @@ import '../../estilo/estilo.css'
 
 function rodape() {
 return  (
-    <div className='container' >
-       <div className='rodape'>
+    <div >
+       <div className='footer'>
           Rodapé da Página
       </div>
     </div>    
