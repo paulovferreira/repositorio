@@ -1,25 +1,19 @@
 import './estilo/estilo.css'
+import Cabecalho from './Cabecalho'
+import Rodape from './Rodape'
+import { Routes, Route } from 'react-router-dom'
+import Home from './pages/Home.tsx'
+import SobreDetalhe from './pages/SobreDetalhe.tsx'
+import Sobre from './pages/Sobre.tsx'
 
 function App() {
 
   return (
-    <div className='app-container'>      
-      <div className='app-div1'>
-        <div className='app-div1-1'></div>
-        <div className='app-div1-2'></div>        
-        <div className='app-div1-3'></div>
-      </div>
-
-      <div className='app-div2'>
-        <div className='app-div2-1'></div>
-        <div className='app-div2-2'></div>
-      </div>
-      
-      <div className='app-div3'>
-        <div className='app-div3-1'></div>
-        <div className='app-div3-2'></div>
-      </div>
-    </div>
+    <Routes>
+      <Route path='/' element={<Home/>} />
+      <Route path='/sobre/:nomealuno' element={<SobreDetalhe/>} />
+      <Route path='sobre' element={<Sobre />} />
+    </Routes>
   )
 }
 

@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
 
 .app-container{
     width: 100%;
@@ -77,4 +82,108 @@
     background-color: gray;
     height: 100%;   
     flex: 1
+}
+
+/*Componente Direction*/
+
+.direction-div1{
+    width: 100%;
+    height: 500px;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;    
+    align-items: center;  
+    flex-wrap: wrap;
+}
+
+.direction-div2{
+    width: 100px;
+    height: 100px;
+    background-color: brown;   
+    order: 5;
+}
+
+.direction-div3{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(47, 1, 251);    
+    order: 2;
+}
+
+.direction-div4{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(108, 96, 162); 
+    order: 3;
+}
+.direction-div5{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(98, 39, 102);        
+    order: 4;
+}
+.direction-div6{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(15, 255, 63); 
+    order:1;
+}
+
+/*Outro Componente*/
+
+.outrocomponente-div1{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
+
+
+/*Cabecalho*/
+.cabecalho-container{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(55, 91, 92);
+    display: flex;
+    flex-direction: row;
+}
+
+.cabecalho-div1{
+    flex:8;
+    height: 100%;
+    
+}
+
+.cabecalho-div2{
+    flex: 1;
+    background-color: brown;
+    height: 100%;
+
+}
+
+
+/*Rodape*/
+.rodape-container{
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    background-color: cadetblue;
+    padding: 20px;
+
+}
+
+
+/*Componene Menu*/
+.menu-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.menu-div1{
+    width: 160px;
+    height: 80px;
+    background-color: chocolate;
+    padding: 10px;
+    margin: 10px;
 }
