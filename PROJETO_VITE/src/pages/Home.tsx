@@ -12,7 +12,10 @@ function Home() {
     
     return(
         <div>
-            <Cabecalho />
+            <Cabecalho titulo="Titulo Informado" 
+                       pagina="Home Informada" 
+                       parametro = "Parametro Informado" />
+
             Página Principal - Home
             <br />
             Variável 1 é: {numero1}
