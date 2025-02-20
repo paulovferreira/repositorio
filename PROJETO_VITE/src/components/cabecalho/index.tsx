@@ -1,9 +1,9 @@
-import './estilo/estilo.css'
-import Menu from './Menu'
+import '../../estilo/estilo.css'
+import Menu from '../menu'
 
 type Informacoes = {
-    titulo: string;
-    pagina: string;
+    titulo?: string;
+    pagina?: string;
     parametro?: string;
 }
 
