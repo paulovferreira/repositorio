@@ -187,3 +187,65 @@
     padding: 10px;
     margin: 10px;
 }
+
+
+
+/*atividade diagnóstica*/
+
+.atv-cabecalho{
+    height: 50px;
+    background-color: antiquewhite;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.atv-comp1{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
+
+.atv-comp2{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(69, 69, 206);
+}
+
+.atv-comp3{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(206, 69, 170);
+}
+
+.atv-comp4{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 0, 187);
+}
+
+.atv-comp1, .atv-comp2, .atv-comp3, .atv-comp4{
+    margin: 5px
+}
+
+.atv-hor-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.atv-ver-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Condicional */
+.cond-container{
+    height: 100px;
+    width: 100px;
+    background-color: brown;
+}
