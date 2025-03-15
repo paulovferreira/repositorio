@@ -249,3 +249,16 @@
     width: 100px;
     background-color: brown;
 }
+
+/* pai */
+.pai-container{
+    width: 600px;
+    height: 150px ;
+    background-color: rgb(101, 101, 236);
+}
+
+.filho-container{
+    width: 300px;
+    height: 100px ;
+    background-color: rgb(230, 129, 93);
+}

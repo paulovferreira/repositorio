@@ -5,6 +5,7 @@ import SobreDetalhe from './pages/SobreDetalhe.tsx'
 import Sobre from './pages/Sobre.tsx'
 import Atividade from './pages/Atividade.tsx'
 import Condicional from './pages/Condicional.tsx'
+import Comunicacao from './pages/Comunicacao.tsx'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <Route path='sobre' element={<Sobre />} />
       <Route path='/atividade' element={<Atividade />} />
       <Route path='/condicional' element={<Condicional />} />
+      <Route path='/comunicacao' element={<Comunicacao />} />
       
 
     </Routes>
