@@ -8,22 +8,23 @@ import Condicional from './pages/Condicional.tsx'
 import Comunicacao from './pages/Comunicacao.tsx'
 import Requisicoes from './pages/requisicoes.tsx'
 import RequisicoesTypes from './pages/requisicoesTypes.tsx'
+import { UsuarioLogadoProvider } from './contexts/contextAuth';
 
 function App() {
 
   return (
-    <Routes>
-      <Route path='/' element={<Home/>} />
-      <Route path='/sobre/:nomealuno' element={<SobreDetalhe/>} />
-      <Route path='sobre' element={<Sobre />} />
-      <Route path='/atividade' element={<Atividade />} />
-      <Route path='/condicional' element={<Condicional />} />
-      <Route path='/comunicacao' element={<Comunicacao />} />
-      <Route path='/requisicoes' element={<Requisicoes />} />
-      <Route path='/requisicoestypes' element={<RequisicoesTypes />} />
-
-
-    </Routes>
+    <UsuarioLogadoProvider>
+      <Routes>      
+            <Route path='/' element={<Home/>} />
+            <Route path='/sobre/:nomealuno' element={<SobreDetalhe/>} />
+            <Route path='sobre' element={<Sobre />} />
+            <Route path='/atividade' element={<Atividade />} />
+            <Route path='/condicional' element={<Condicional />} />
+            <Route path='/comunicacao' element={<Comunicacao />} />
+            <Route path='/requisicoes' element={<Requisicoes />} />
+            <Route path='/requisicoestypes' element={<RequisicoesTypes />} />          
+      </Routes> 
+    </UsuarioLogadoProvider>
   )
 }
 

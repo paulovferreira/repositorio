@@ -1,5 +1,7 @@
+import { useContext } from 'react';
 import Cabecalho from '../components/cabecalho'
 import Rodape from '../components/rodape'
+import { UsuarioLogadoContext } from "../contexts/contextAuth";
 
 function Home() {
 
@@ -9,6 +11,14 @@ function Home() {
     function Somar(n1: number, n2:number): number{
         return n1 + n2;
     }   
+
+    const UsuarioLogadoCtx = useContext(UsuarioLogadoContext);
+
+
+
+    function handleClick() {
+        UsuarioLogadoCtx?.setName('PVFERREIRA'); 
+    }
     
     return(
         <div>
@@ -23,10 +33,13 @@ function Home() {
             Variável 2 é: {numero2}
             <br />
             A soma é: {Somar(numero1, numero2)}
+            <br />
 
+            <button onClick={handleClick}>Clique aqui... </button>
 
-
-
+            <br />
+            <br />
+            Usuario no Context: {UsuarioLogadoCtx?.name}
             
             <Rodape />
 

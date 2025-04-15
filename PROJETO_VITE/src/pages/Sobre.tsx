@@ -1,8 +1,11 @@
 import Cabecalho from "../components/cabecalho";
 import Rodape from "../components/rodape";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { UsuarioLogadoContext } from "../contexts/contextAuth";
 
 function Sobre(){
+
+    const UsuarioLogadoCtx = useContext(UsuarioLogadoContext);
 
     //let numero: number = 10;
     const [numero, setnumero] = useState(0);
@@ -18,9 +21,14 @@ function Sobre(){
 
     return(
         <div>
-            <Cabecalho />
-            Sobre
+            <Cabecalho />            
+            Sobre            
             <br />
+            <hr />
+            <br />
+            Usuário presente no contexto é: {UsuarioLogadoCtx?.name}
+            <br />
+            <hr />
             O numero informado é: {numero}
             <br />
             <button onClick={handleClickButton}>Somar 10</button>
