@@ -9,12 +9,14 @@ import Comunicacao from './pages/Comunicacao.tsx'
 import Requisicoes from './pages/requisicoes.tsx'
 import RequisicoesTypes from './pages/requisicoesTypes.tsx'
 import { UsuarioLogadoProvider } from './contexts/contextAuth';
+import NotFound from './pages/NotFound.tsx'
 
 function App() {
 
   return (
     <UsuarioLogadoProvider>
       <Routes>      
+            <Route path='*' element={<NotFound/>} />
             <Route path='/' element={<Home/>} />
             <Route path='/sobre/:nomealuno' element={<SobreDetalhe/>} />
             <Route path='sobre' element={<Sobre />} />
