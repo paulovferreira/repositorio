@@ -12,20 +12,20 @@ function Effects() {
     const [sobrenome, setSobrenome] = useState('Ferreira')
     const [nomecompleto, setNomecompleto] = useState('')
 
-    useEffect( ()=> {
-        console.log('RODOU O EFFECT ... ')}, // primeiro parametro do effect é o que ele deve rodar.
-        []  // Segundo parâmetro é quando deve rodar. // o Array vazio não permite executar mais de uma vez.
-            // Essa tag vazia monitora QUANDO será executado o effect. Para monitorar uma const, basta colocar [age] [name] etc...
-     )
+    // useEffect( ()=> {
+    //     console.log('RODOU O EFFECT ... ')}, // primeiro parametro do effect é o que ele deve rodar.
+    //     []  // Segundo parâmetro é quando deve rodar. // o Array vazio não permite executar mais de uma vez.
+    //         // Essa tag vazia monitora QUANDO será executado o effect. Para monitorar uma const, basta colocar [age] [name] etc...
+    //  )
 
-    /* USANDO EFFECT PARA CONCATENAR VARIÁVEIS
+    // /* USANDO EFFECT PARA CONCATENAR VARIÁVEIS
     
-    useEffect( () => { 
-        setNomecompleto(nome+' '+sobrenome)
-        console.log(nomecompleto)    },
-     [nome, sobrenome] 
+    // useEffect( () => { 
+    //     setNomecompleto(nome+' '+sobrenome)
+    //     console.log(nomecompleto)    },
+    //  [nome, sobrenome] 
      
-     );*/
+    //  );*/
 
 
      // Podemos ainda utilizar o useEffect para concatenar constantes existentes.

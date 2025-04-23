@@ -9,6 +9,8 @@ import Comunicacao from './pages/Comunicacao.tsx'
 import Requisicoes from './pages/requisicoes.tsx'
 import RequisicoesTypes from './pages/requisicoesTypes.tsx'
 import { UsuarioLogadoProvider } from './contexts/contextAuth';
+import Strap from './pages/reactstrap.tsx'
+import Effects from './pages/effects.tsx'
 
 function App() {
 
@@ -23,6 +25,9 @@ function App() {
             <Route path='/comunicacao' element={<Comunicacao />} />
             <Route path='/requisicoes' element={<Requisicoes />} />
             <Route path='/requisicoestypes' element={<RequisicoesTypes />} />          
+            <Route path='/strap' element={<Strap />} />   
+            <Route path='/effect' element={<Effects />} />   
+
       </Routes> 
     </UsuarioLogadoProvider>
   )

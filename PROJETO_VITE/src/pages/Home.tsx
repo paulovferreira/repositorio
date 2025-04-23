@@ -14,8 +14,6 @@ function Home() {
 
     const UsuarioLogadoCtx = useContext(UsuarioLogadoContext);
 
-
-
     function handleClick() {
         UsuarioLogadoCtx?.setName('PVFERREIRA'); 
     }
